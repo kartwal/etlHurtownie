@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (3.5.1)
+  - AZDropdownMenu (1.1.1)
+  - HTMLReader (0.9.6)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.5.0)
+  - AZDropdownMenu
+  - HTMLReader (~> 0.9)
+
+SPEC CHECKSUMS:
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  AZDropdownMenu: 0ba09d5f7b1b8dc795824ec281c4dde8515f4498
+  HTMLReader: 7e21488ee378afc56ccade8af35840c4e03e434c
+
+PODFILE CHECKSUM: f25574544c869650afed4c325265b570ab4b5a78
+
+COCOAPODS: 1.1.1
