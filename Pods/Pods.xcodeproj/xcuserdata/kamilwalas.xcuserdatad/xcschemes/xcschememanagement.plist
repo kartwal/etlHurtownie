@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FZAccordionTableView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HTMLReader.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,11 +42,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>713673824BECC5988F1BDA703953CAAB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>777CD914EE965E9C9A2DA19A5661A2DD</key>
 		<dict>
 			<key>primary</key>
@@ -53,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A874C70CF1DF3931E02E40E1E471456</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFC6095663C8C444F0093D2A2BECFA58</key>
 		<dict>
 			<key>primary</key>
 			<true/>

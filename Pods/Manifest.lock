@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (3.5.1)
   - AZDropdownMenu (1.1.1)
+  - FZAccordionTableView (0.2.3)
   - HTMLReader (0.9.6)
 
 DEPENDENCIES:
   - Alamofire (~> 3.5.0)
   - AZDropdownMenu
+  - FZAccordionTableView (~> 0.2.3)
   - HTMLReader (~> 0.9)
 
 SPEC CHECKSUMS:
   Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
   AZDropdownMenu: 0ba09d5f7b1b8dc795824ec281c4dde8515f4498
+  FZAccordionTableView: e64f49c71c32d750feda14025b088bcd25d1a71f
   HTMLReader: 7e21488ee378afc56ccade8af35840c4e03e434c
 
-PODFILE CHECKSUM: f25574544c869650afed4c325265b570ab4b5a78
+PODFILE CHECKSUM: 728258cc605d35ba6f691bf34bae2dbb0128893c
 
 COCOAPODS: 1.1.1
