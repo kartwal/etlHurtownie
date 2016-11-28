@@ -7,34 +7,27 @@
 //
 import RealmSwift
 import UIKit
-import FZAccordionTableView
 
-class ReviewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FZAccordionTableViewDelegate {
+class ReviewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
-    @IBOutlet weak var tableView: FZAccordionTableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var products = [Product]()
+    
+    var selectedIndex = Int()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         tableView.dataSource = self
         tableView.delegate = self
         
         
-        tableView.registerNib(UINib(nibName: "HeaderCell", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderView.reusableIdentifierHeader)
-        
-        
-        let realm = try! Realm()
-        for product in realm.objects(Product)
+        for item in products
         {
-            products.append(product)
+            print(item.productType)
+            print(item.id)
         }
-        
-        
-        
         // Do any additional setup after loading the view.
     }
 
@@ -43,71 +36,39 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 5
-    }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 300
-    }
-    
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return HeaderView.defaultHeaderHeight
-    }
-    
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return tableView.rowHeight
-    }
-    
-    func tableView(tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return tableView.sectionHeaderHeight
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! InfoTableViewCell
-        
-        
-        
-        
-        return cell
-    }
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tableView.dequeueReusableHeaderFooterViewWithIdentifier(HeaderView.reusableIdentifierHeader)
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return products.count
     }
     
-    func tableView(tableView: FZAccordionTableView, willOpenSection section: Int, withHeader header: UITableViewHeaderFooterView?) {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-    }
-    
-    func tableView(tableView: FZAccordionTableView, didOpenSection section: Int, withHeader header: UITableViewHeaderFooterView?) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("product", forIndexPath: indexPath) as!ProductsTableViewCell
         
-    }
-    
-    func tableView(tableView: FZAccordionTableView, willCloseSection section: Int, withHeader header: UITableViewHeaderFooterView?) {
+        cell.productName.text = "Nazwa produktu: " + products[indexPath.row].productName
+        cell.productType.text = "Typ produktu: " + products[indexPath.row].productType
+        cell.productDescription.text = "Opis: " + products[indexPath.row].additionalDescription
+        cell.productId.text = "ID produktu: " + String(products[indexPath.row].id)
+        cell.productReviewsCount.text = "Opinie: " + String(products[indexPath.row].reviews.count)
         
+        return cell
     }
     
-    func tableView(tableView: FZAccordionTableView, didCloseSection section: Int, withHeader header: UITableViewHeaderFooterView?) {
-        
-    }
-    
-    func tableView(tableView: FZAccordionTableView, canInteractWithHeaderAtSection section: Int) -> Bool {
-        return true
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+        selectedIndex = indexPath.row
+        performSegueWithIdentifier("showDetails", sender: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showDetails"
+        {
+            let destination = segue.destinationViewController as! ProductDetailsViewController
+            destination.product = products[selectedIndex]
+        }
     }
-    */
-
 }

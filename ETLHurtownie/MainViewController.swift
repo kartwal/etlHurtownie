@@ -29,16 +29,17 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
     @IBOutlet weak var etlProcessOutlet: UIButton!
     
     @IBOutlet weak var showResultsOutlet: UIButton!
-    
+
     let baseURL = "http://ceneo.pl/"
     
     var downloadedHtmls = [HTMLDocument]()
     
-    var product = Product()
+    var finalProduct = Product()
     
+    let queue = dispatch_queue_create("realmQueue", DISPATCH_QUEUE_SERIAL)
 
     lazy var busyAlertController: BusyAlert = {
-        let busyAlert = BusyAlert(title: "", message: "ETL to aplikacja stworzona jako projekt zaliczeniowy z przedmiotu Hurtownie Danych na kierunku Informatyka Stosowana na Uniwersytecie Ekonomicznym w Krakowie. Głównym celem aplikacji jest przeprowadzenie procesu ETL (Extract, Transform, Load) na danych pobranych z serwisu Ceneo.pl\n\nAutorzy: Szymon Nitecki, Kamil Walas, Katarzyna Konopelska, Aleksandra Kołodziejczyk\n\nIcon made by Freepik from www.flaticon.com", presentingViewController: self)
+        let busyAlert = BusyAlert(title: "", message: "", presentingViewController: self)
         busyAlert.delegate = self
         return busyAlert
     }()
@@ -64,7 +65,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         navigationItem.hidesBackButton = false
         navigationController?.navigationBar.translucent = false
         title = "ETL"
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         
         menu!.cellTapHandler = {  (indexPath: NSIndexPath) -> Void in
             print("Selected index: \(indexPath.row)")
@@ -74,15 +75,25 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             case 1:
                 print("eksport txt")
             case 2:
-                let realm = try! Realm()
-                try! realm.write {
-                    realm.deleteAll()
-                    let alert = UIAlertController(title: "Informacja", message: "Dane zostały usunięte", preferredStyle: .Alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                }
+                print("kupa")
+                dispatch_async(dispatch_get_main_queue(), {
+                    let realm = try! Realm()
+                    try! realm.write {
+                        realm.deleteAll()
+                    }
+
+                    dispatch_async(dispatch_get_main_queue(), {
+                        let alert = UIAlertController(title: "Informacja", message: "Dane zostały usunięte", preferredStyle: .Alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                        self.presentViewController(alert, animated: true, completion: nil)
+                        self.showResultsOutlet.enabled = false
+                        self.showResultsOutlet.alpha = 0.2
+                    
+                    })
+                })
+                
             case 3:
-                let alert = UIAlertController(title: "O Aplikacji", message: "", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "O Aplikacji", message: "ETL to aplikacja stworzona jako projekt zaliczeniowy z przedmiotu Hurtownie Danych na kierunku Informatyka Stosowana na Uniwersytecie Ekonomicznym w Krakowie. Głównym celem aplikacji jest przeprowadzenie procesu ETL (Extract, Transform, Load) na danych pobranych z serwisu Ceneo.pl\n\nAutorzy: Szymon Nitecki, Kamil Walas, Katarzyna Konopelska, Aleksandra Kołodziejczyk\n\nIcon made by Freepik from www.flaticon.com", preferredStyle: .Alert)
                 alert.addAction(UIAlertAction(title: "Zamknij", style: .Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
 
@@ -91,19 +102,21 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             }
 
         }
-        let realm = try! Realm()
-        let person = realm.objects(Product)
-        
-        if person.count > 0
-        {
-            showResultsOutlet.enabled = true
-            showResultsOutlet.alpha = 1
-        }
-        else
-        {
-            showResultsOutlet.enabled = false
-            showResultsOutlet.alpha = 0.2
-        }
+        dispatch_async(dispatch_get_main_queue(), {
+                    let realm = try! Realm()
+                    let product = realm.objects(Product)
+            
+                    if product.count > 0
+                    {
+                        self.showResultsOutlet.enabled = true
+                        self.showResultsOutlet.alpha = 1
+                    }
+                    else
+                    {
+                        self.showResultsOutlet.enabled = false
+                        self.showResultsOutlet.alpha = 0.2
+                    }
+        })
     }
     override func viewDidLayoutSubviews() {
         textFieldOneLineBorder(urlTextField, color: UIColor.darkGrayColor())
@@ -122,10 +135,13 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
     }
 
     @IBAction func eProcessAction(sender: AnyObject) {
+        urlTextField.resignFirstResponder()
         downloadedHtmls.removeAll()
         busyAlertController = BusyAlert(title: "Trwa process Extract\n\n", message: "", presentingViewController: self)
         busyAlertController.display()
         logTextView.text = logTextView.text + "Rozpoczęto proces Extract\n"
+//        let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
+//        logTextView.scrollRangeToVisible(range)
         if let typedId = urlTextField.text
         {
             downloadReviews(baseURL, productID: typedId, automatic: false)
@@ -139,19 +155,23 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
     }
     
     @IBAction func tProcessAction(sender: AnyObject) {
+        urlTextField.resignFirstResponder()
         busyAlertController = BusyAlert(title: "Trwa process proces Transform\n\n", message: "", presentingViewController: self)
         busyAlertController.display()
         logTextView.text = logTextView.text + "Rozpoczęto proces Transform\n"
-        
+//        let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
+//        logTextView.scrollRangeToVisible(range)
         transformReviews(urlTextField.text!, automatic: false)
     }
     
     @IBAction func lProcessAction(sender: AnyObject) {
+        urlTextField.resignFirstResponder()
         busyAlertController = BusyAlert(title: "Trwa process proces Load\n\n", message: "", presentingViewController: self)
         busyAlertController.display()
         logTextView.text = logTextView.text + "Rozpoczęto proces Load\n"
-        
-        loadDataProcess(product, automatic: false)
+//        let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
+//        logTextView.scrollRangeToVisible(range)
+        loadDataProcess(finalProduct, automatic: false)
     }
     
     func downloadReviews(baseURL : String, productID : String, automatic : Bool)
@@ -212,6 +232,9 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                 logTextView.text = logTextView.text + "✅ Zakończono proces Extract\n⬇️Pobranych zostało \(downloadedHtmls.count) plików\n"
             }
             
+//            let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
+//            logTextView.scrollRangeToVisible(range)
+            
             if automatic == false
             {
                 tProcessOutlet.enabled = true
@@ -234,10 +257,13 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         }
     }
 
-    
+    var titleProduct = String()
     func transformReviews(productID : String, automatic : Bool)
     {
-        var reviews = List<Review>()
+        let product = Product()
+        let reviews = List<Review>()
+        
+
         
         if productID == ""
         {
@@ -256,17 +282,20 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                 
                 if item.objectForKeyedSubscript("property") as? String == "og:title"
                 {
-                    product.productName = item.objectForKeyedSubscript("content") as! String
+                    var testString = item.objectForKeyedSubscript("content") as! String
+                    testString.removeRange(testString.rangeOfString("- Ceny i opinie")!)
+                    print(testString)
+                    product.productName = testString
                 }
                 
                 if item.objectForKeyedSubscript("property") as? String == "og:type"
                 {
-                    product.productName = item.objectForKeyedSubscript("content") as! String
+                    product.productType = item.objectForKeyedSubscript("content") as! String
                 }
                 
                 if item.objectForKeyedSubscript("property") as? String == "og:description"
                 {
-                    product.productName = item.objectForKeyedSubscript("content") as! String
+                    product.additionalDescription = item.objectForKeyedSubscript("content") as! String
                 }
             }
         }
@@ -370,13 +399,15 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         
         product.reviews = reviews
         logTextView.text = logTextView.text + "✅Zakończono proces Transform\n✳️Dodano \(reviews.count) opinii\n"
-        
+//        let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
+//        logTextView.scrollRangeToVisible(range)
         if automatic == false
         {
             tProcessOutlet.enabled = false
             tProcessOutlet.alpha = 0.2
             lProcessOutlet.enabled = true
             lProcessOutlet.alpha = 1
+            finalProduct = product
             busyAlertController.dismiss()
             
         }
@@ -388,6 +419,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
 
     func loadDataProcess(product : Product, automatic : Bool)
     {
+        print(product.additionalDescription)
         let realm = try! Realm()        
         do{
             try realm.write{
@@ -405,6 +437,8 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             lProcessOutlet.enabled = false
             lProcessOutlet.alpha = 0.2
             logTextView.text = logTextView.text + "✅Zakończono proces Load\n"
+//            let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
+//            logTextView.scrollRangeToVisible(range)
             busyAlertController.dismiss()
         }
         else
@@ -415,14 +449,50 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             lProcessOutlet.alpha = 0.2
             logTextView.text = logTextView.text + "✅Zakończono proces Load\n"
             logTextView.text = logTextView.text + "✅Zakończono proces ETL\n"
+//            let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
+//            logTextView.scrollRangeToVisible(range)
             busyAlertController.dismiss()
         }
     }
-    
+    var test = [Product]()
     @IBAction func showResultsAction(sender: AnyObject) {
-        performSegueWithIdentifier("showReviews", sender: nil)
+        urlTextField.resignFirstResponder()
+        dispatch_async(dispatch_get_main_queue(), {
+            
+            do
+            {
+                print(self.titleProduct)
+                let realm = try Realm()
+                let items = Array(realm.objects(Product))
+                
+                
+                self.test = items
+            }
+            catch let error as NSError
+            {
+                print(error.localizedDescription)
+            }
+
+            
+            
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.performSegueWithIdentifier("showReviews", sender: nil)
+            })
+        })
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showReviews"
+        {
+            let destination = segue.destinationViewController as! ReviewsViewController
+            destination.products = test
+            
+        }
     }
     @IBAction func performETL(sender: AnyObject) {
+        urlTextField.resignFirstResponder()
         lProcessOutlet.enabled = false
         lProcessOutlet.alpha = 0.2
         tProcessOutlet.enabled = false
@@ -465,6 +535,9 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         
     }
     
+    @IBAction func resignKeyboardAction(sender: AnyObject) {
+        view.endEditing(true)
+    }
     
 
 }

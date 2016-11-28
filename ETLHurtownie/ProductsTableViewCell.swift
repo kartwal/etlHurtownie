@@ -1,15 +1,14 @@
 //
-//  InfoTableViewCell.swift
+//  ProductsTableViewCell.swift
 //  ETLHurtownie
 //
-//  Created by Kamil Walas on 27.11.2016.
+//  Created by Kamil Walas on 28.11.2016.
 //  Copyright © 2016 ARIOS. All rights reserved.
 //
 
 import UIKit
-import FZAccordionTableView
 
-class InfoTableViewCell: UITableViewCell {
+class ProductsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,9 +21,9 @@ class InfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBOutlet weak var prosAndCons: UITextView!
-    @IBOutlet weak var recomend: UILabel!
-    @IBOutlet weak var review: UITextView!
-    @IBOutlet weak var reviewDate: UILabel!
-    @IBOutlet weak var author: UILabel!
+    @IBOutlet weak var productReviewsCount: UILabel!
+    @IBOutlet weak var productDescription: UILabel!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productType: UILabel!
+    @IBOutlet weak var productId: UILabel!
 }

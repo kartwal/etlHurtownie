@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B811D04D1DEB81D900487F52 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B811D04C1DEB81D900487F52 /* HeaderCell.xib */; };
 		B811D04F1DEB82BA00487F52 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811D04E1DEB82BA00487F52 /* HeaderView.swift */; };
-		B811D0511DEB85EF00487F52 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811D0501DEB85EF00487F52 /* InfoTableViewCell.swift */; };
+		B811D0531DECB26900487F52 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811D0521DECB26900487F52 /* ProductsTableViewCell.swift */; };
+		B811D0551DECB3EB00487F52 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811D0541DECB3EB00487F52 /* ProductDetailsViewController.swift */; };
+		B811D0591DECECE600487F52 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B811D0581DECECE600487F52 /* ReviewTableViewCell.swift */; };
 		B87064CD1DEB045500C3C229 /* BusyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87064CC1DEB045500C3C229 /* BusyAlert.swift */; };
 		B884D3411DE0DEF50049A1FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884D3401DE0DEF50049A1FF /* AppDelegate.swift */; };
 		B884D3461DE0DEF50049A1FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B884D3441DE0DEF50049A1FF /* Main.storyboard */; };
@@ -63,9 +64,10 @@
 		5AC038C7647CB62CE8A35547 /* Pods-ETLHurtownie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETLHurtownie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ETLHurtownie/Pods-ETLHurtownie.debug.xcconfig"; sourceTree = "<group>"; };
 		650E93E8DAF910AE73EE03E9 /* Pods_ETLHurtownie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ETLHurtownie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710B542492637FE3C1550719 /* Pods-ETLHurtownie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ETLHurtownie.release.xcconfig"; path = "Pods/Target Support Files/Pods-ETLHurtownie/Pods-ETLHurtownie.release.xcconfig"; sourceTree = "<group>"; };
-		B811D04C1DEB81D900487F52 /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		B811D04E1DEB82BA00487F52 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		B811D0501DEB85EF00487F52 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		B811D0521DECB26900487F52 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		B811D0541DECB3EB00487F52 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		B811D0581DECECE600487F52 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		B87064CC1DEB045500C3C229 /* BusyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusyAlert.swift; sourceTree = "<group>"; };
 		B884D33D1DE0DEF50049A1FF /* ETLHurtownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETLHurtownie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B884D3401DE0DEF50049A1FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,11 +146,12 @@
 				B884D3401DE0DEF50049A1FF /* AppDelegate.swift */,
 				B884D3771DE0F42D0049A1FF /* ReviewsViewController.swift */,
 				B884D3751DE0EF970049A1FF /* MainViewController.swift */,
-				B811D0501DEB85EF00487F52 /* InfoTableViewCell.swift */,
 				B8C41FE01DEB09E6009C6A1A /* Objects.swift */,
+				B811D0521DECB26900487F52 /* ProductsTableViewCell.swift */,
+				B811D0581DECECE600487F52 /* ReviewTableViewCell.swift */,
 				B87064CC1DEB045500C3C229 /* BusyAlert.swift */,
+				B811D0541DECB3EB00487F52 /* ProductDetailsViewController.swift */,
 				B884D3441DE0DEF50049A1FF /* Main.storyboard */,
-				B811D04C1DEB81D900487F52 /* HeaderCell.xib */,
 				B811D04E1DEB82BA00487F52 /* HeaderView.swift */,
 				B884D3471DE0DEF50049A1FF /* Assets.xcassets */,
 				B884D3491DE0DEF50049A1FF /* LaunchScreen.storyboard */,
@@ -300,7 +303,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B811D04D1DEB81D900487F52 /* HeaderCell.xib in Resources */,
 				B884D34B1DE0DEF50049A1FF /* LaunchScreen.storyboard in Resources */,
 				B884D3481DE0DEF50049A1FF /* Assets.xcassets in Resources */,
 				B884D3461DE0DEF50049A1FF /* Main.storyboard in Resources */,
@@ -380,7 +382,9 @@
 				B811D04F1DEB82BA00487F52 /* HeaderView.swift in Sources */,
 				B8C41FE11DEB09E6009C6A1A /* Objects.swift in Sources */,
 				B87064CD1DEB045500C3C229 /* BusyAlert.swift in Sources */,
-				B811D0511DEB85EF00487F52 /* InfoTableViewCell.swift in Sources */,
+				B811D0531DECB26900487F52 /* ProductsTableViewCell.swift in Sources */,
+				B811D0591DECECE600487F52 /* ReviewTableViewCell.swift in Sources */,
+				B811D0551DECB3EB00487F52 /* ProductDetailsViewController.swift in Sources */,
 				B884D3781DE0F42D0049A1FF /* ReviewsViewController.swift in Sources */,
 				B884D3411DE0DEF50049A1FF /* AppDelegate.swift in Sources */,
 			);

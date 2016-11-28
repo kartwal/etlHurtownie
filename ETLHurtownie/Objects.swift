@@ -127,7 +127,7 @@ class Product : Object
 //    }
     func toCSV() -> String
     {
-        var part1 = "# Product data\n:" + "#nazwa produktu: " + String(id) + "\n#rodzaj: " + productType + "\n#dodatkowy opis: " + additionalDescription + "\nid opinii, wady, zalety, treść, ocena, autor, data opinii, polecany, +, -\n"
+        let part1 = "# Product data\n:" + "#nazwa produktu: " + String(id) + "\n#rodzaj: " + productType + "\n#dodatkowy opis: " + additionalDescription + "\nid opinii, wady, zalety, treść, ocena, autor, data opinii, polecany, +, -\n"
 
         for reviewString in reviews
         {
