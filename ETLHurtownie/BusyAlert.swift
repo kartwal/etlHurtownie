@@ -3,28 +3,50 @@
 //  ETLHurtownie
 //
 //  Created by Kamil Walas on 27.11.2016.
-//  Copyright © 2016 ARIOS. All rights reserved.
+//  Copyright © 2016 uek. All rights reserved.
 //
 import Foundation
 import UIKit
-
+/**
+ Klasa odpowiadająca za wyświetlanie ekranu oczekiwania - KLASA zaczerpnięta z INTERNETU - przeszła delikatne modyfikacje na potrzeby tej aplikacji
+ */
 class BusyAlert {
     
+    /**
+     Widok alertu
+     */
     var busyAlertController: UIAlertController?
-    var presentingViewController: UIViewController?
-    var activityIndicator: UIActivityIndicatorView?
-    var delegate:BusyAlertDelegate?
     
+    /**
+     Kontroller prezentujący
+     */
+    var presentingViewController: UIViewController?
+    
+    /**
+     Indykator aktywności
+     */
+    var activityIndicator: UIActivityIndicatorView?
+    
+    /**
+     Delegat dla alertu
+     */
+    var delegate:BusyAlertDelegate?
+    /**
+     Label inicjująca ekran oczekiwania
+     
+     Parameter title: tytuł wyświetlany pogrubioną czcionką
+     Parameter message: wiadomość wyświetlana wąską czcionką
+     Parameter presentingViewController: kontroler w którym chcemy wyświetlić widok oczekiwania
+     */
     init (title:String, message:String, presentingViewController: UIViewController) {
         busyAlertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-//        busyAlertController!.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: "Cancel Button"), style: UIAlertActionStyle.Cancel, handler:{(alert: UIAlertAction!) in
-//            self.delegate?.didCancelBusyAlert()
-//        }))
         self.presentingViewController = presentingViewController
         activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         busyAlertController!.view.addSubview(activityIndicator!)
     }
-    
+    /**
+     Funkcja obsługująca włączenie ekranu oczekiwania
+     */
     func display() {
         dispatch_async(dispatch_get_main_queue(), {
             self.presentingViewController!.presentViewController(self.busyAlertController!, animated: true, completion: {
@@ -37,7 +59,9 @@ class BusyAlert {
         })
         
     }
-    
+    /**
+     Funkcja obsługująca wyłączenie widoku oczekiwania
+     */
     func dismiss() {
         dispatch_async(dispatch_get_main_queue(), {
             self.busyAlertController?.dismissViewControllerAnimated(true, completion: nil)
@@ -45,7 +69,9 @@ class BusyAlert {
     }
     
 }
-
+/**
+ Protokół odpowiadający za obsługę zdarzenia wyłączenia ekranu oczekiwania, funkcja MUSI zostać zaimplementowana, ale może być pusta.
+ */
 protocol BusyAlertDelegate {
     func didCancelBusyAlert()
 }

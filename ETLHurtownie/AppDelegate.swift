@@ -3,7 +3,7 @@
 //  ETLHurtownie
 //
 //  Created by Kamil Walas on 19.11.2016.
-//  Copyright © 2016 ARIOS. All rights reserved.
+//  Copyright © 2016 uek. All rights reserved.
 //
 
 import UIKit

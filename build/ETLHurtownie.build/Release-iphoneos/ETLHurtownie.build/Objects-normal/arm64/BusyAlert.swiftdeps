@@ -1,0 +1,329 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BusyAlert"
+- "BusyAlertDelegate"
+provides-nominal:
+- "C12ETLHurtownie9BusyAlert"
+- "P12ETLHurtownie17BusyAlertDelegate"
+provides-member:
+- ["C12ETLHurtownie9BusyAlert", ""]
+- ["P12ETLHurtownie17BusyAlertDelegate", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "dispatch_async"
+- !private "NSLayoutAttribute"
+- "UIViewController"
+- "UIAlertController"
+- !private "UIActivityIndicatorViewStyle"
+- "String"
+- "BusyAlert"
+- !private "NSLayoutConstraint"
+- "UIActivityIndicatorView"
+- !private "NSLayoutRelation"
+- !private "UIAlertControllerStyle"
+- "BusyAlertDelegate"
+- !private "BooleanLiteralType"
+- !private "dispatch_get_main_queue"
+depends-member:
+- !private ["Ps9AnyObject", "NSLayoutAttribute"]
+- !private ["Ps9AnyObject", "NSLayoutConstraint"]
+- !private ["Ps9AnyObject", "NSLayoutRelation"]
+- !private ["Ps9AnyObject", "UIActivityIndicatorView"]
+- !private ["Ps9AnyObject", "UIActivityIndicatorViewStyle"]
+- !private ["Ps9AnyObject", "UIAlertController"]
+- !private ["Ps9AnyObject", "UIAlertControllerStyle"]
+- !private ["Ps9AnyObject", "activityIndicator"]
+- !private ["Ps9AnyObject", "addConstraint"]
+- !private ["Ps9AnyObject", "addSubview"]
+- !private ["Ps9AnyObject", "busyAlertController"]
+- !private ["Ps9AnyObject", "dismissViewControllerAnimated"]
+- !private ["Ps9AnyObject", "dispatch_async"]
+- !private ["Ps9AnyObject", "dispatch_get_main_queue"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "presentViewController"]
+- !private ["Ps9AnyObject", "presentingViewController"]
+- !private ["Ps9AnyObject", "startAnimating"]
+- !private ["Ps9AnyObject", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Ps9AnyObject", "view"]
+- ["Ps9AnyObject", ""]
+- ["C12ETLHurtownie9BusyAlert", "BusyAlertDelegate"]
+- !private ["C12ETLHurtownie9BusyAlert", "NSLayoutAttribute"]
+- !private ["C12ETLHurtownie9BusyAlert", "NSLayoutConstraint"]
+- !private ["C12ETLHurtownie9BusyAlert", "NSLayoutRelation"]
+- ["C12ETLHurtownie9BusyAlert", "String"]
+- ["C12ETLHurtownie9BusyAlert", "UIActivityIndicatorView"]
+- !private ["C12ETLHurtownie9BusyAlert", "UIActivityIndicatorViewStyle"]
+- ["C12ETLHurtownie9BusyAlert", "UIAlertController"]
+- !private ["C12ETLHurtownie9BusyAlert", "UIAlertControllerStyle"]
+- ["C12ETLHurtownie9BusyAlert", "UIViewController"]
+- ["C12ETLHurtownie9BusyAlert", "activityIndicator"]
+- ["C12ETLHurtownie9BusyAlert", "busyAlertController"]
+- ["C12ETLHurtownie9BusyAlert", "deinit"]
+- ["C12ETLHurtownie9BusyAlert", "delegate"]
+- ["C12ETLHurtownie9BusyAlert", "dismiss"]
+- !private ["C12ETLHurtownie9BusyAlert", "dispatch_async"]
+- !private ["C12ETLHurtownie9BusyAlert", "dispatch_get_main_queue"]
+- ["C12ETLHurtownie9BusyAlert", "display"]
+- ["C12ETLHurtownie9BusyAlert", "init"]
+- ["C12ETLHurtownie9BusyAlert", "presentingViewController"]
+- ["P12ETLHurtownie17BusyAlertDelegate", "didCancelBusyAlert"]
+- !private ["V12CoreGraphics7CGFloat", "deinit"]
+- !private ["Ps11CVarArgType", "addConstraint"]
+- !private ["Ps11CVarArgType", "addSubview"]
+- !private ["Ps11CVarArgType", "dismissViewControllerAnimated"]
+- !private ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "presentViewController"]
+- !private ["Ps11CVarArgType", "startAnimating"]
+- !private ["Ps11CVarArgType", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Ps11CVarArgType", "view"]
+- !private ["Ps28CustomDebugStringConvertible", "addConstraint"]
+- !private ["Ps28CustomDebugStringConvertible", "addSubview"]
+- !private ["Ps28CustomDebugStringConvertible", "dismissViewControllerAnimated"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
+- !private ["Ps28CustomDebugStringConvertible", "startAnimating"]
+- !private ["Ps28CustomDebugStringConvertible", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- !private ["Ps23CustomStringConvertible", "addConstraint"]
+- !private ["Ps23CustomStringConvertible", "addSubview"]
+- !private ["Ps23CustomStringConvertible", "dismissViewControllerAnimated"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "presentViewController"]
+- !private ["Ps23CustomStringConvertible", "startAnimating"]
+- !private ["Ps23CustomStringConvertible", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- !private ["Ps9Equatable", "Alert"]
+- !private ["Ps9Equatable", "CenterX"]
+- !private ["Ps9Equatable", "CenterY"]
+- !private ["Ps9Equatable", "Equal"]
+- !private ["Ps9Equatable", "Gray"]
+- !private ["Ps9Equatable", "addConstraint"]
+- !private ["Ps9Equatable", "addSubview"]
+- !private ["Ps9Equatable", "dismissViewControllerAnimated"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "presentViewController"]
+- !private ["Ps9Equatable", "startAnimating"]
+- !private ["Ps9Equatable", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Ps9Equatable", "view"]
+- !private ["Ps8Hashable", "Alert"]
+- !private ["Ps8Hashable", "CenterX"]
+- !private ["Ps8Hashable", "CenterY"]
+- !private ["Ps8Hashable", "Equal"]
+- !private ["Ps8Hashable", "Gray"]
+- !private ["Ps8Hashable", "addConstraint"]
+- !private ["Ps8Hashable", "addSubview"]
+- !private ["Ps8Hashable", "dismissViewControllerAnimated"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "presentViewController"]
+- !private ["Ps8Hashable", "startAnimating"]
+- !private ["Ps8Hashable", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["Ps8Hashable", "view"]
+- !private ["SQ", "deinit"]
+- !private ["PSo8NSCoding", "addConstraint"]
+- !private ["PSo8NSCoding", "addSubview"]
+- !private ["PSo8NSCoding", "dismissViewControllerAnimated"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "presentViewController"]
+- !private ["PSo8NSCoding", "startAnimating"]
+- !private ["PSo8NSCoding", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["PSo8NSCoding", "view"]
+- !private ["PSo26NSExtensionRequestHandling", "dismissViewControllerAnimated"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- !private ["OSC17NSLayoutAttribute", "CenterX"]
+- !private ["OSC17NSLayoutAttribute", "CenterY"]
+- !private ["CSo18NSLayoutConstraint", "init"]
+- !private ["OSC16NSLayoutRelation", "Equal"]
+- !private ["CSo8NSObject", "addConstraint"]
+- !private ["CSo8NSObject", "addSubview"]
+- !private ["CSo8NSObject", "dismissViewControllerAnimated"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "presentViewController"]
+- !private ["CSo8NSObject", "startAnimating"]
+- !private ["CSo8NSObject", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["CSo8NSObject", "view"]
+- !private ["PSo16NSObjectProtocol", "addConstraint"]
+- !private ["PSo16NSObjectProtocol", "addSubview"]
+- !private ["PSo16NSObjectProtocol", "dismissViewControllerAnimated"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "presentViewController"]
+- !private ["PSo16NSObjectProtocol", "startAnimating"]
+- !private ["PSo16NSObjectProtocol", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- !private ["Sq", "deinit"]
+- !private ["Ps16RawRepresentable", "Alert"]
+- !private ["Ps16RawRepresentable", "CenterX"]
+- !private ["Ps16RawRepresentable", "CenterY"]
+- !private ["Ps16RawRepresentable", "Equal"]
+- !private ["Ps16RawRepresentable", "Gray"]
+- !private ["PSo29UIAccessibilityIdentification", "addConstraint"]
+- !private ["PSo29UIAccessibilityIdentification", "addSubview"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "startAnimating"]
+- !private ["PSo29UIAccessibilityIdentification", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["CSo23UIActivityIndicatorView", "init"]
+- !private ["CSo23UIActivityIndicatorView", "startAnimating"]
+- !private ["CSo23UIActivityIndicatorView", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["OSC28UIActivityIndicatorViewStyle", "Gray"]
+- !private ["CSo17UIAlertController", "dismissViewControllerAnimated"]
+- !private ["CSo17UIAlertController", "init"]
+- !private ["CSo17UIAlertController", "view"]
+- !private ["OSC22UIAlertControllerStyle", "Alert"]
+- !private ["PSo12UIAppearance", "addConstraint"]
+- !private ["PSo12UIAppearance", "addSubview"]
+- !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "startAnimating"]
+- !private ["PSo12UIAppearance", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["PSo21UIAppearanceContainer", "addConstraint"]
+- !private ["PSo21UIAppearanceContainer", "addSubview"]
+- !private ["PSo21UIAppearanceContainer", "dismissViewControllerAnimated"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "presentViewController"]
+- !private ["PSo21UIAppearanceContainer", "startAnimating"]
+- !private ["PSo21UIAppearanceContainer", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- !private ["PSo18UIContentContainer", "dismissViewControllerAnimated"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "presentViewController"]
+- !private ["PSo18UIContentContainer", "view"]
+- !private ["PSo17UICoordinateSpace", "addConstraint"]
+- !private ["PSo17UICoordinateSpace", "addSubview"]
+- !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "startAnimating"]
+- !private ["PSo17UICoordinateSpace", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["PSo13UIDynamicItem", "addConstraint"]
+- !private ["PSo13UIDynamicItem", "addSubview"]
+- !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "startAnimating"]
+- !private ["PSo13UIDynamicItem", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["PSo18UIFocusEnvironment", "addConstraint"]
+- !private ["PSo18UIFocusEnvironment", "addSubview"]
+- !private ["PSo18UIFocusEnvironment", "dismissViewControllerAnimated"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "presentViewController"]
+- !private ["PSo18UIFocusEnvironment", "startAnimating"]
+- !private ["PSo18UIFocusEnvironment", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- !private ["CSo11UIResponder", "addConstraint"]
+- !private ["CSo11UIResponder", "addSubview"]
+- !private ["CSo11UIResponder", "dismissViewControllerAnimated"]
+- !private ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "presentViewController"]
+- !private ["CSo11UIResponder", "startAnimating"]
+- !private ["CSo11UIResponder", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["CSo11UIResponder", "view"]
+- !private ["PSo16UIStateRestoring", "dismissViewControllerAnimated"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "presentViewController"]
+- !private ["PSo16UIStateRestoring", "view"]
+- !private ["PSo18UITraitEnvironment", "addConstraint"]
+- !private ["PSo18UITraitEnvironment", "addSubview"]
+- !private ["PSo18UITraitEnvironment", "dismissViewControllerAnimated"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "presentViewController"]
+- !private ["PSo18UITraitEnvironment", "startAnimating"]
+- !private ["PSo18UITraitEnvironment", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- !private ["CSo6UIView", "addConstraint"]
+- !private ["CSo6UIView", "addSubview"]
+- !private ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "startAnimating"]
+- !private ["CSo6UIView", "translatesAutoresizingMaskIntoConstraints"]
+- !private ["CSo16UIViewController", "dismissViewControllerAnimated"]
+- !private ["CSo16UIViewController", "init"]
+- !private ["CSo16UIViewController", "presentViewController"]
+- !private ["CSo16UIViewController", "view"]
+- !private ["Ps12_Reflectable", "addConstraint"]
+- !private ["Ps12_Reflectable", "addSubview"]
+- !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "startAnimating"]
+- !private ["Ps12_Reflectable", "translatesAutoresizingMaskIntoConstraints"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C12ETLHurtownie9BusyAlert"
+- "P12ETLHurtownie17BusyAlertDelegate"
+- !private "V12CoreGraphics7CGFloat"
+- !private "Ps11CVarArgType"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps8Hashable"
+- !private "SQ"
+- !private "PSo8NSCoding"
+- !private "PSo26NSExtensionRequestHandling"
+- !private "OSC17NSLayoutAttribute"
+- !private "CSo18NSLayoutConstraint"
+- !private "OSC16NSLayoutRelation"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "Sq"
+- !private "Ps16RawRepresentable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "CSo23UIActivityIndicatorView"
+- !private "OSC28UIActivityIndicatorViewStyle"
+- !private "CSo17UIAlertController"
+- !private "OSC22UIAlertControllerStyle"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- !private "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "CSo11UIResponder"
+- !private "PSo16UIStateRestoring"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- !private "CSo16UIViewController"
+- !private "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMSyncConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSyncUser.h"
+- "./Realm.framework/Headers/RLMSyncSession.h"
+- "./Realm.framework/Headers/RLMSyncPermissionChange.h"
+- "./Realm.framework/Headers/RLMSyncManager.h"
+- "./Realm.framework/Headers/RLMSyncCredentials.h"
+- "./Realm.framework/Headers/RLMSyncConfiguration.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMSyncUtil.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration+Sync.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+interface-hash: "7d2e1c8e7698b52874cea0a3b58e3243"

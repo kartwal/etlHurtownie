@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="532" y="157"/>
         </scene>
-        <!--Reviews View Controller-->
+        <!--Products List View Controller-->
         <scene sceneID="Yvx-ou-mUp">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="xEj-yc-S32" customClass="ReviewsViewController" customModule="ETLHurtownie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="xEj-yc-S32" customClass="ProductsListViewController" customModule="ETLHurtownie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2dD-l6-vP1"/>
                         <viewControllerLayoutGuide type="bottom" id="fyg-Lq-tja"/>
@@ -274,7 +274,7 @@
                         <barButtonItem key="backBarButtonItem" title="Powrót" id="dcy-ou-8Xm"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="ne0-zN-Cjk" id="E6c-Cy-GeN"/>
+                        <outlet property="tableView" destination="ne0-zN-Cjk" id="tDb-ei-dab"/>
                         <segue destination="uf9-Bq-DEN" kind="show" identifier="showDetails" id="xba-gB-E3d"/>
                     </connections>
                 </viewController>

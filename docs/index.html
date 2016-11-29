@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (85% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BusyAlert.html">BusyAlert</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Product.html">Product</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ProductDetailsViewController.html">ProductDetailsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ProductsListViewController.html">ProductsListViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ProductsTableViewCell.html">ProductsTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:C12ETLHurtownie11RealmString">RealmString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Review.html">Review</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReviewTableViewCell.html">ReviewTableViewCell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions.html#/c:objc(cs)UIView">UITableView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:P12ETLHurtownie17BusyAlertDelegate">BusyAlertDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#etl' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='etl'>ETL</h1>
+
+<p>Projekt zaliczeniowy - Hurtownie Danych - wersja iOS
+ETL to aplikacja stworzona jako projekt zaliczeniowy z przedmiotu Hurtownie Danych na kierunku Informatyka Stosowana na Uniwersytecie Ekonomicznym w Krakowie. Głównym celem aplikacji jest przeprowadzenie procesu ETL (Extract, Trasform, Load) na danych pobranych z serwisu Ceneo.pl.</p>
+<a href='#aplikacji-w-wersji-ios-nie-mo-na-pobra-ani-zainstalowa-na-innym-urz-dzeniu-ni-urz-dzenie-tw-rcy-wynika-to-z-kwestii-certyfikacyjnych-firmy-apple' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='aplikacji-w-wersji-ios-nie-mo-na-pobra-ani-zainstalowa-na-innym-urz-dzeniu-ni-urz-dzenie-tw-rcy-wynika-to-z-kwestii-certyfikacyjnych-firmy-apple'>Aplikacji w wersji iOS NIE MOŻNA pobrać ani zainstalować na innym urządzeniu niż urządzenie twórcy - wynika to z kwestii certyfikacyjnych firmy Apple</h2>
+
+<p>Oczywiście byłoby to możliwe gdyby twórca miał prywatne opłacone konto developerskie, lecz dla jednej aplikacji ciężko wydać 100$</p>
+<a href='#wykorzystane-technologie' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='wykorzystane-technologie'>Wykorzystane technologie</h2>
+
+<ul>
+<li>aplikacja została napisana na system operacyjny iOS - minimalna wersja systemu to 8.0</li>
+<li>aplikacja została napisana w języku Swift wersja 2.2</li>
+<li>do przetwarzania plików html z danymi o produktach wykorzystana została biblioteka <a href="https://github.com/nolanw/HTMLReader">HTMLReader</a> w wersji 0.9</li>
+<li>do przechowywania danych lokalnie wykorzystane zostało rozwiązanie <a href="https://realm.io/products/swift/">realm.io</a> w wersji w najnowszej wersji dla języka Swift 2.2</li>
+<li>do zarządzania połączeniem z serwerem ceneo wykorzystano bibliotekę Alamofire w wersji 3.5.0 (wersja zgodna z Swift 2.2) <a href="https://github.com/Alamofire/Alamofire">Alamofire</a></li>
+<li>do uzyskania menu typu dropdown wykorzystano bibliotekę AZDropdownMenu w obecnie najnowszej wersji (wersje nie są oznaczone)<a href="https://github.com/realm/jazzy">AZDropdownMenu</a></li>
+<li>do wygenerowania dokumentacji posłużyła biblioteka jazzy</li>
+</ul>
+<a href='#dokumentacja-techniczna' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='dokumentacja-techniczna'>Dokumentacja techniczna</h2>
+
+<p><a href="http://kartwal.ayz.pl/docs/index.html">Link do dokumentacji</a></p>
+<a href='#projekt-bazy-danych' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='projekt-bazy-danych'>Projekt bazy danych</h2>
+
+<p>Ponieważ technologia użyta do przechowywania danych jest obiektowa istnieją dwie klasy reprezentujące obiekty w bazie danych:
+- <a href="http://kartwal.ayz.pl/docs/Classes/Product.html">Product</a> - klasa reprezentująca produkty
+- <a href="http://kartwal.ayz.pl/docs/Classes/Review.html">Review</a> - klasa reprezentująca opinie o produktach
+Każdy produkt posiada listę z obiektami typu Review - co odpowiada relacji 1 - &#8734; w relacyjnych bazach danych </p>
+<a href='#instrukcja-u-ytkownika' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='instrukcja-u-ytkownika'>Instrukcja użytkownika</h2>
+
+<!--[Link do instrukcji](https://docs.google.com/presentation/d/1HMFL0xjRb8wYqnbS5GlmsSTnOxsO483PdHdGJ8sx2bM/edit#slide=id.p)-->
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-11-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

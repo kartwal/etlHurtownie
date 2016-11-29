@@ -3,7 +3,7 @@
 //  ETLHurtownie
 //
 //  Created by Kamil Walas on 19.11.2016.
-//  Copyright © 2016 ARIOS. All rights reserved.
+//  Copyright © 2016 uek. All rights reserved.
 //
 
 import UIKit
@@ -15,40 +15,71 @@ import QuickLook
 
 class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelegate, QLPreviewControllerDataSource {
 
+    /**
+     Obiekt menu typu dropdown - spadającego z góry ekranu
+     */
     var menu : AZDropdownMenu?
     
+    /**
+     Outlet dla przycisku
+     */
     @IBOutlet weak var eProcessOutlet: UIButton!
-    
+    /**
+     Outlet dla przycisku
+     */
     @IBOutlet weak var tProcessOutlet: UIButton!
-    
+    /**
+     Outlet dla przycisku
+     */
     @IBOutlet weak var lProcessOutlet: UIButton!
-    
+    /**
+     Outlet dla pola tekstowego
+     */
     @IBOutlet weak var urlTextField: UITextField!
-    
+    /**
+     Outlet dla pwidoku tekstowego
+     */
     @IBOutlet weak var logTextView: UITextView!
-    
+    /**
+     Outlet dla przycisku
+     */
     @IBOutlet weak var etlProcessOutlet: UIButton!
-    
+    /**
+     Outlet dla przycisku
+     */
     @IBOutlet weak var showResultsOutlet: UIButton!
-
+    /**
+     Bazowy element linku który jest wykorzysytywany przy przesyłaniu żądania na serwer ceneo
+     */
     let baseURL = "http://ceneo.pl/"
-    
+    /**
+     Tablica przechowująca pobrane strony html
+     */
     var downloadedHtmls = [HTMLDocument]()
-    
+    /**
+    Finalny obiekt produktu używany przy automatycznym procesie ETL
+     */
     var finalProduct = Product()
-    
-    let queue = dispatch_queue_create("realmQueue", DISPATCH_QUEUE_SERIAL)
-
+    /**
+     Inicjalizacja kontrolera będącego widokiem który jest prezentowany przy oczekiwaniu na skończenie np pobierania
+     */
     lazy var busyAlertController: BusyAlert = {
         let busyAlert = BusyAlert(title: "", message: "", presentingViewController: self)
         busyAlert.delegate = self
         return busyAlert
     }()
-    
+    /**
+     Zmienna przechowująca wartość wybranego pliku do odczytu
+     */
     var selectedOption = 0
-    
+    /**
+     Obiekt quick-look odpowiadający za wywietlanie pliku txt bądź csv
+     */
     var quickLookController = QLPreviewController()
     
+    /**
+     Funkcja przygotowująca ekran tuż po załadowaniu - określa akcje dla menu, ustala kształt przycisków, ustawia delegata dla pola tekstowego oraz sprawdza początkowy stan bazy
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareRoundedButton(eProcessOutlet)
@@ -182,14 +213,20 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                     }
         })
     }
+    /**
+     Funkcja ustawiająca layout po załadowaniu wszystkich pod-widoków oraz komponentów
+     */
     override func viewDidLayoutSubviews() {
         textFieldOneLineBorder(urlTextField, color: UIColor.darkGrayColor())
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
+    /**
+     Funkcja odpowiadająca za pokazanie menu
+     */
     func showDropdown() {
         if (self.menu?.isDescendantOfView(self.view) == true) {
             self.menu?.hideMenu()
@@ -197,7 +234,9 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             self.menu?.showMenuFromView(self.view)
         }
     }
-
+    /**
+     Funkcja odpowiadająca za obsługę przycisku "E" - jej outlet action
+     */
     @IBAction func eProcessAction(sender: AnyObject) {
         urlTextField.resignFirstResponder()
         downloadedHtmls.removeAll()
@@ -216,7 +255,9 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         }
         
     }
-    
+    /**
+     Funkcja odpowiadająca za obsługę przycisku "T" - jej outlet action
+     */
     @IBAction func tProcessAction(sender: AnyObject) {
         urlTextField.resignFirstResponder()
         busyAlertController = BusyAlert(title: "Trwa process proces Transform\n\n", message: "", presentingViewController: self)
@@ -225,7 +266,9 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
 
         transformReviews(urlTextField.text!, automatic: false)
     }
-    
+    /**
+     Funkcja odpowiadająca za obsługę przycisku "l" - jej outlet action
+     */
     @IBAction func lProcessAction(sender: AnyObject) {
         urlTextField.resignFirstResponder()
         busyAlertController = BusyAlert(title: "Trwa process proces Load\n\n", message: "", presentingViewController: self)
@@ -234,7 +277,13 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
 
         loadDataProcess(finalProduct, automatic: false)
     }
-    
+    /**
+     Funkcja odpowiadająca za wysłanie zapytania na serwer oraz przekazanie obsługi do dalszej funkcji - parseHTML
+     
+     Parameter baseURL: pierwsza część linku do ceneo
+     Parameter productID: id produktu którego recenzje chcemy odczytać
+     Parameter automatic: bool mówiący czy akcja toczy się z przycisku E czy z przycisku ETL
+     */
     func downloadReviews(baseURL : String, productID : String, automatic : Bool)
     {
         Alamofire.request(.POST, "\(baseURL)\(productID)").responseString(completionHandler: {response in
@@ -251,7 +300,12 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             }
         })
     }
-    
+    /**
+     Funkcja parsująca HTML
+     
+     Parameter html: dokument html ściągnięty z internetu
+     Parameter automatic: bool mówiący czy akcja toczy się z przycisku E czy z przycisku ETL
+     */
     func parseHTML(html : HTMLDocument, automatic : Bool)
     {
         downloadedHtmls.append(html)
@@ -312,7 +366,12 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         }
     }
 
-    var titleProduct = String()
+    /**
+     Funkcja odpowiadająca za transformacje danych pobranych z HTML'a
+     
+     Parameter productID: id podane przez użytkownika
+     Parameter automatic: zmienna oznaczająca czy akcja pochodzi z przycisku T czy z ETL
+     */
     func transformReviews(productID : String, automatic : Bool)
     {
         let product = Product()
@@ -324,7 +383,14 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         }
         else
         {
-           product.id = Int(productID)!
+           if let typedId = Int(productID)
+           {
+                product.id = typedId
+           }
+           else
+           {
+                product.id = 0
+           }
         }
         
         if downloadedHtmls.count > 0
@@ -466,7 +532,12 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             loadDataProcess(product, automatic: true)
         }
     }
-
+    /**
+     Funkcja odpowiadająca za załadownie danych do bazy danych Realm
+     
+     Parameter product: obiekt produktu
+     Parameter automatic: bool sygnalizujący czy akcja pochodzi z przycisku L czy z przycisku ETL
+     */
     func loadDataProcess(product : Product, automatic : Bool)
     {
         print(product.additionalDescription)
@@ -502,19 +573,24 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             busyAlertController.dismiss()
         }
     }
-    var test = [Product]()
+    /**
+    Zmienna w której zostają przesłane dane do dalszego widoku
+     */
+    var productsFin = [Product]()
+    /**
+     Funkcja odpowiadająca za obsługę przycisku "Pokaż wyniki"
+     */
     @IBAction func showResultsAction(sender: AnyObject) {
         urlTextField.resignFirstResponder()
         dispatch_async(dispatch_get_main_queue(), {
             
             do
             {
-                print(self.titleProduct)
                 let realm = try Realm()
                 let items = Array(realm.objects(Product))
                 
                 
-                self.test = items
+                self.productsFin = items
             }
             catch let error as NSError
             {
@@ -527,15 +603,20 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         })
         
     }
-    
+    /**
+     Funkcja przygotowująca przejście na kolejny ekran
+     */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showReviews"
         {
-            let destination = segue.destinationViewController as! ReviewsViewController
-            destination.products = test
+            let destination = segue.destinationViewController as! ProductsListViewController
+            destination.products = productsFin
             
         }
     }
+    /**
+     Funkcja odpowiadająca za obsługę przycisku "ETL" - jej outlet action
+     */
     @IBAction func performETL(sender: AnyObject) {
         urlTextField.resignFirstResponder()
         lProcessOutlet.enabled = false
@@ -549,15 +630,25 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         downloadReviews(baseURL, productID: urlTextField.text!, automatic: true)
 
     }
+    /**
+     Funkcja delegująca zachowanie klawiatury wywołaniu akcji zamknięcia klawiatury
+     */
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
+    /**
+     Funkcja odpowiadająca zdarzenie rozpoczęcia edytowania pola tekstowego
+     */
     func textFieldDidBeginEditing(textField: UITextField) {
         textFieldOneLineBorder(urlTextField, color: UIColor.redColor())
     }
-    
+    /**
+     Funkcja odpowiadająca za rysowanie "androidowej" lini w polu tekstowym
+     
+     Parameter textField: pole które chcemy obrysować
+     Parameter color: kolor który chcemy nadać
+     */
     func textFieldOneLineBorder(textField : UITextField, color : UIColor)
     {
         let border = CALayer()
@@ -568,6 +659,12 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         textField.layer.addSublayer(border)
         textField.layer.masksToBounds = true
     }
+    
+    /**
+     Funkcja odpowiadająca za narysowanie prostokątnego outline'a dla przycisku
+     
+     Parameter button: przycisk który chcemy obrysować
+     */
     func prepareRoundedButton(button : UIButton)
     {
         button.backgroundColor = UIColor.clearColor()
@@ -575,19 +672,27 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.redColor().CGColor
     }
-    
+    /**
+     Funkcja wymagana do poprawnego działania wioku oczekiwania - nie ma zdefiniowanego żadnego działania specjalnego które ma się wykonać po zamknięciu alertu
+     */
     func didCancelBusyAlert() {
         
     }
-    
+    /**
+     Akcja przycisku zamykającego klawiaturę - jest to przycisk globalny - całoekranowy
+     */
     @IBAction func resignKeyboardAction(sender: AnyObject) {
         view.endEditing(true)
     }
-    
+    /**
+     Metoda odpowiedzialna za obsługę podglądu pliku zwracająca ilość przeglądanych plików "na raz" - funkcja delegująca
+     */
     func numberOfPreviewItemsInPreviewController(controller: QLPreviewController) -> Int {
         return 1
     }
-
+    /**
+     Funkcja odpowiadająca za to który plik ma zostać odczytany - funkcja delegująca
+     */
     func previewController(controller: QLPreviewController, previewItemAtIndex index: Int) -> QLPreviewItem {
         if selectedOption == 0
         {
@@ -607,7 +712,12 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         }
 
     }
-    
+    /**
+     Funkcja odpowiadająca za usuwanie plików
+     
+     Parameter itemName: nazwa pliku
+     Parameter fileExtension: rozszerzenie pliku
+     */
     func removeFile(itemName:String, fileExtension: String) {
         let fileManager = NSFileManager.defaultManager()
         let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory

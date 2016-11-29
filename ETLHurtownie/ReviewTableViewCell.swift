@@ -3,11 +3,13 @@
 //  ETLHurtownie
 //
 //  Created by Kamil Walas on 28.11.2016.
-//  Copyright © 2016 ARIOS. All rights reserved.
+//  Copyright © 2016 uek. All rights reserved.
 //
 
 import UIKit
-
+/**
+ Klasa odpowiedzialna za wiersz recenzji
+ */
 class ReviewTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
@@ -20,6 +22,8 @@ class ReviewTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    /**
+     TextField do wyświetlania danych
+     */
     @IBOutlet weak var reviewText: UITextView!
 }

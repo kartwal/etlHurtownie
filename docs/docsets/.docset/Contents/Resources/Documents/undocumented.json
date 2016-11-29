@@ -1,0 +1,82 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/AppDelegate.swift",
+      "line": 12,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/BusyAlert.swift",
+      "line": 76,
+      "symbol": "BusyAlertDelegate.didCancelBusyAlert()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/MainViewController.swift",
+      "line": 16,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/Objects.swift",
+      "line": 213,
+      "symbol": "RealmString.stringValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/ProductDetailsViewController.swift",
+      "line": 43,
+      "symbol": "ProductDetailsViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/ProductDetailsViewController.swift",
+      "line": 165,
+      "symbol": "UITableView.reloadData(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/ProductsListViewController.swift",
+      "line": 41,
+      "symbol": "ProductsListViewController.didReceiveMemoryWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/ProductsTableViewCell.swift",
+      "line": 15,
+      "symbol": "ProductsTableViewCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/ProductsTableViewCell.swift",
+      "line": 20,
+      "symbol": "ProductsTableViewCell.setSelected(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/ReviewTableViewCell.swift",
+      "line": 15,
+      "symbol": "ReviewTableViewCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/ReviewTableViewCell.swift",
+      "line": 20,
+      "symbol": "ReviewTableViewCell.setSelected(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie"
+}

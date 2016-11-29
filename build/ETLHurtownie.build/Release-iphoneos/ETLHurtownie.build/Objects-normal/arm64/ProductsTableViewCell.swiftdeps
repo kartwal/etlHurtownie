@@ -1,0 +1,300 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ProductsTableViewCell"
+provides-nominal:
+- "C12ETLHurtownie21ProductsTableViewCell"
+provides-member:
+- ["C12ETLHurtownie21ProductsTableViewCell", ""]
+provides-dynamic-lookup:
+- "productName"
+- "productType"
+- "productDescription"
+- "setSelected"
+- "productId"
+- "awakeFromNib"
+- "productReviewsCount"
+depends-top-level:
+- "Bool"
+- "UILabel"
+- "ProductsTableViewCell"
+- "UITableViewCell"
+depends-member:
+- ["Ps9AnyObject", "awakeFromNib"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "productDescription"]
+- ["Ps9AnyObject", "productId"]
+- ["Ps9AnyObject", "productName"]
+- ["Ps9AnyObject", "productReviewsCount"]
+- ["Ps9AnyObject", "productType"]
+- ["Ps9AnyObject", "setSelected"]
+- ["Ps9AnyObject", ""]
+- ["Ps11CVarArgType", "awakeFromNib"]
+- ["Ps11CVarArgType", "init"]
+- ["Ps11CVarArgType", "productDescription"]
+- ["Ps11CVarArgType", "productId"]
+- ["Ps11CVarArgType", "productName"]
+- ["Ps11CVarArgType", "productReviewsCount"]
+- ["Ps11CVarArgType", "productType"]
+- ["Ps11CVarArgType", "setSelected"]
+- ["Ps11CVarArgType", ""]
+- ["Ps28CustomDebugStringConvertible", "awakeFromNib"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "productDescription"]
+- ["Ps28CustomDebugStringConvertible", "productId"]
+- ["Ps28CustomDebugStringConvertible", "productName"]
+- ["Ps28CustomDebugStringConvertible", "productReviewsCount"]
+- ["Ps28CustomDebugStringConvertible", "productType"]
+- ["Ps28CustomDebugStringConvertible", "setSelected"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "awakeFromNib"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "productDescription"]
+- ["Ps23CustomStringConvertible", "productId"]
+- ["Ps23CustomStringConvertible", "productName"]
+- ["Ps23CustomStringConvertible", "productReviewsCount"]
+- ["Ps23CustomStringConvertible", "productType"]
+- ["Ps23CustomStringConvertible", "setSelected"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "awakeFromNib"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "productDescription"]
+- ["Ps9Equatable", "productId"]
+- ["Ps9Equatable", "productName"]
+- ["Ps9Equatable", "productReviewsCount"]
+- ["Ps9Equatable", "productType"]
+- ["Ps9Equatable", "setSelected"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "awakeFromNib"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "productDescription"]
+- ["Ps8Hashable", "productId"]
+- ["Ps8Hashable", "productName"]
+- ["Ps8Hashable", "productReviewsCount"]
+- ["Ps8Hashable", "productType"]
+- ["Ps8Hashable", "setSelected"]
+- ["Ps8Hashable", ""]
+- ["PSo8NSCoding", "awakeFromNib"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "productDescription"]
+- ["PSo8NSCoding", "productId"]
+- ["PSo8NSCoding", "productName"]
+- ["PSo8NSCoding", "productReviewsCount"]
+- ["PSo8NSCoding", "productType"]
+- ["PSo8NSCoding", "setSelected"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "awakeFromNib"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "productDescription"]
+- ["CSo8NSObject", "productId"]
+- ["CSo8NSObject", "productName"]
+- ["CSo8NSObject", "productReviewsCount"]
+- ["CSo8NSObject", "productType"]
+- ["CSo8NSObject", "setSelected"]
+- ["PSo16NSObjectProtocol", "awakeFromNib"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "productDescription"]
+- ["PSo16NSObjectProtocol", "productId"]
+- ["PSo16NSObjectProtocol", "productName"]
+- ["PSo16NSObjectProtocol", "productReviewsCount"]
+- ["PSo16NSObjectProtocol", "productType"]
+- ["PSo16NSObjectProtocol", "setSelected"]
+- ["PSo16NSObjectProtocol", ""]
+- ["C12ETLHurtownie21ProductsTableViewCell", "Bool"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "UILabel"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "awakeFromNib"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "deinit"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "init"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "productDescription"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "productId"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "productName"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "productReviewsCount"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "productType"]
+- ["C12ETLHurtownie21ProductsTableViewCell", "setSelected"]
+- ["PSo29UIAccessibilityIdentification", "awakeFromNib"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "productDescription"]
+- ["PSo29UIAccessibilityIdentification", "productId"]
+- ["PSo29UIAccessibilityIdentification", "productName"]
+- ["PSo29UIAccessibilityIdentification", "productReviewsCount"]
+- ["PSo29UIAccessibilityIdentification", "productType"]
+- ["PSo29UIAccessibilityIdentification", "setSelected"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "awakeFromNib"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "productDescription"]
+- ["PSo12UIAppearance", "productId"]
+- ["PSo12UIAppearance", "productName"]
+- ["PSo12UIAppearance", "productReviewsCount"]
+- ["PSo12UIAppearance", "productType"]
+- ["PSo12UIAppearance", "setSelected"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "awakeFromNib"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "productDescription"]
+- ["PSo21UIAppearanceContainer", "productId"]
+- ["PSo21UIAppearanceContainer", "productName"]
+- ["PSo21UIAppearanceContainer", "productReviewsCount"]
+- ["PSo21UIAppearanceContainer", "productType"]
+- ["PSo21UIAppearanceContainer", "setSelected"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "awakeFromNib"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "productDescription"]
+- ["PSo17UICoordinateSpace", "productId"]
+- ["PSo17UICoordinateSpace", "productName"]
+- ["PSo17UICoordinateSpace", "productReviewsCount"]
+- ["PSo17UICoordinateSpace", "productType"]
+- ["PSo17UICoordinateSpace", "setSelected"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "awakeFromNib"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "productDescription"]
+- ["PSo13UIDynamicItem", "productId"]
+- ["PSo13UIDynamicItem", "productName"]
+- ["PSo13UIDynamicItem", "productReviewsCount"]
+- ["PSo13UIDynamicItem", "productType"]
+- ["PSo13UIDynamicItem", "setSelected"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "awakeFromNib"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "productDescription"]
+- ["PSo18UIFocusEnvironment", "productId"]
+- ["PSo18UIFocusEnvironment", "productName"]
+- ["PSo18UIFocusEnvironment", "productReviewsCount"]
+- ["PSo18UIFocusEnvironment", "productType"]
+- ["PSo18UIFocusEnvironment", "setSelected"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo27UIGestureRecognizerDelegate", "awakeFromNib"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "productDescription"]
+- ["PSo27UIGestureRecognizerDelegate", "productId"]
+- ["PSo27UIGestureRecognizerDelegate", "productName"]
+- ["PSo27UIGestureRecognizerDelegate", "productReviewsCount"]
+- ["PSo27UIGestureRecognizerDelegate", "productType"]
+- ["PSo27UIGestureRecognizerDelegate", "setSelected"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "awakeFromNib"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "productDescription"]
+- ["CSo11UIResponder", "productId"]
+- ["CSo11UIResponder", "productName"]
+- ["CSo11UIResponder", "productReviewsCount"]
+- ["CSo11UIResponder", "productType"]
+- ["CSo11UIResponder", "setSelected"]
+- ["CSo15UITableViewCell", "Bool"]
+- ["CSo15UITableViewCell", "UILabel"]
+- ["CSo15UITableViewCell", "awakeFromNib"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "productDescription"]
+- ["CSo15UITableViewCell", "productId"]
+- ["CSo15UITableViewCell", "productName"]
+- ["CSo15UITableViewCell", "productReviewsCount"]
+- ["CSo15UITableViewCell", "productType"]
+- ["CSo15UITableViewCell", "setSelected"]
+- ["CSo15UITableViewCell", ""]
+- ["PSo18UITraitEnvironment", "awakeFromNib"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "productDescription"]
+- ["PSo18UITraitEnvironment", "productId"]
+- ["PSo18UITraitEnvironment", "productName"]
+- ["PSo18UITraitEnvironment", "productReviewsCount"]
+- ["PSo18UITraitEnvironment", "productType"]
+- ["PSo18UITraitEnvironment", "setSelected"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "Bool"]
+- ["CSo6UIView", "UILabel"]
+- ["CSo6UIView", "awakeFromNib"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "productDescription"]
+- ["CSo6UIView", "productId"]
+- ["CSo6UIView", "productName"]
+- ["CSo6UIView", "productReviewsCount"]
+- ["CSo6UIView", "productType"]
+- ["CSo6UIView", "setSelected"]
+- ["Ps12_Reflectable", "awakeFromNib"]
+- ["Ps12_Reflectable", "init"]
+- ["Ps12_Reflectable", "productDescription"]
+- ["Ps12_Reflectable", "productId"]
+- ["Ps12_Reflectable", "productName"]
+- ["Ps12_Reflectable", "productReviewsCount"]
+- ["Ps12_Reflectable", "productType"]
+- ["Ps12_Reflectable", "setSelected"]
+- ["Ps12_Reflectable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "Ps11CVarArgType"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "C12ETLHurtownie21ProductsTableViewCell"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo27UIGestureRecognizerDelegate"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "Ps12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMSyncConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSyncUser.h"
+- "./Realm.framework/Headers/RLMSyncSession.h"
+- "./Realm.framework/Headers/RLMSyncPermissionChange.h"
+- "./Realm.framework/Headers/RLMSyncManager.h"
+- "./Realm.framework/Headers/RLMSyncCredentials.h"
+- "./Realm.framework/Headers/RLMSyncConfiguration.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMSyncUtil.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration+Sync.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+interface-hash: "e6d11b2b85b9893b2ac7d91901d90c2a"

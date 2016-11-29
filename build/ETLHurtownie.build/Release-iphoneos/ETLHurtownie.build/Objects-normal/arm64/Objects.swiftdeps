@@ -1,0 +1,856 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Review"
+- "Product"
+- "RealmString"
+provides-nominal:
+- "C12ETLHurtownie6Review"
+- "C12ETLHurtownie7Product"
+- "C12ETLHurtownie11RealmString"
+provides-member:
+- ["C12ETLHurtownie6Review", ""]
+- ["C12ETLHurtownie7Product", ""]
+- ["C12ETLHurtownie11RealmString", ""]
+provides-dynamic-lookup:
+- "stringValue"
+- "thumbDownCount"
+- "reviewDate"
+- "ignoredProperties"
+- "thumbUpCount"
+- "starsCount"
+- "toString"
+- "toTxt"
+- "advantages"
+- "recomended"
+- "productName"
+- "primaryKey"
+- "primaryKey"
+- "productType"
+- "additionalDescription"
+- "drawbacks"
+- "toCSV"
+- "toCSV"
+- "author"
+- "id"
+- "id"
+- "body"
+depends-top-level:
+- "List"
+- "Review"
+- !private "+"
+- !private "UnicodeScalarType"
+- "NSDate"
+- "Object"
+- "StringLiteralType"
+- !private "NSString"
+- !private "Array"
+- "RealmString"
+- !private "+="
+- "String"
+- "Product"
+- "BooleanLiteralType"
+depends-member:
+- ["P10RealmSwift11AddableType", "Distance"]
+- ["P10RealmSwift11AddableType", "IntegerLiteralType"]
+- ["P10RealmSwift11AddableType", "_DisabledRangeIndex"]
+- ["Ps9AnyObject", "Element"]
+- ["Ps9AnyObject", "Generator"]
+- ["Ps9AnyObject", "Index"]
+- ["Ps9AnyObject", "List"]
+- ["Ps9AnyObject", "NSDate"]
+- !private ["Ps9AnyObject", "RealmString"]
+- !private ["Ps9AnyObject", "String"]
+- ["Ps9AnyObject", "SubSequence"]
+- ["Ps9AnyObject", "_Element"]
+- ["Ps9AnyObject", "_backingAdvantages"]
+- ["Ps9AnyObject", "_backingDrawbacks"]
+- ["Ps9AnyObject", "additionalDescription"]
+- ["Ps9AnyObject", "advantages"]
+- !private ["Ps9AnyObject", "appendContentsOf"]
+- ["Ps9AnyObject", "author"]
+- ["Ps9AnyObject", "body"]
+- !private ["Ps9AnyObject", "deinit"]
+- ["Ps9AnyObject", "drawbacks"]
+- ["Ps9AnyObject", "id"]
+- ["Ps9AnyObject", "ignoredProperties"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "map"]
+- ["Ps9AnyObject", "primaryKey"]
+- ["Ps9AnyObject", "productName"]
+- ["Ps9AnyObject", "productType"]
+- ["Ps9AnyObject", "recomended"]
+- !private ["Ps9AnyObject", "removeAll"]
+- ["Ps9AnyObject", "reviewDate"]
+- ["Ps9AnyObject", "reviews"]
+- ["Ps9AnyObject", "starsCount"]
+- !private ["Ps9AnyObject", "stringByReplacingOccurrencesOfString"]
+- ["Ps9AnyObject", "stringValue"]
+- ["Ps9AnyObject", "thumbDownCount"]
+- ["Ps9AnyObject", "thumbUpCount"]
+- ["Ps9AnyObject", "toCSV"]
+- ["Ps9AnyObject", "toString"]
+- ["Ps9AnyObject", "toTxt"]
+- ["Ps9AnyObject", ""]
+- !private ["Sa", "Element"]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "deinit"]
+- !private ["Sa", "map"]
+- !private ["Ps23ArrayLiteralConvertible", "Element"]
+- !private ["Ps23ArrayLiteralConvertible", "Generator"]
+- !private ["Ps23ArrayLiteralConvertible", "Index"]
+- !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
+- !private ["Ps23ArrayLiteralConvertible", "map"]
+- !private ["Vs10ArraySlice", "Generator"]
+- !private ["Vs10ArraySlice", "Index"]
+- ["Ps22BidirectionalIndexType", "Distance"]
+- ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
+- ["Ps22BidirectionalIndexType", "_DisabledRangeIndex"]
+- ["Ps21BitwiseOperationsType", "Distance"]
+- ["Ps21BitwiseOperationsType", "IntegerLiteralType"]
+- ["Ps21BitwiseOperationsType", "_DisabledRangeIndex"]
+- !private ["Sb", "deinit"]
+- ["Ps11CVarArgType", "Distance"]
+- ["Ps11CVarArgType", "Generator"]
+- ["Ps11CVarArgType", "Index"]
+- ["Ps11CVarArgType", "IntegerLiteralType"]
+- ["Ps11CVarArgType", "List"]
+- ["Ps11CVarArgType", "NSDate"]
+- !private ["Ps11CVarArgType", "RealmString"]
+- !private ["Ps11CVarArgType", "String"]
+- ["Ps11CVarArgType", "SubSequence"]
+- ["Ps11CVarArgType", "_DisabledRangeIndex"]
+- ["Ps11CVarArgType", "_Element"]
+- ["Ps11CVarArgType", "_backingAdvantages"]
+- ["Ps11CVarArgType", "_backingDrawbacks"]
+- ["Ps11CVarArgType", "additionalDescription"]
+- ["Ps11CVarArgType", "advantages"]
+- !private ["Ps11CVarArgType", "appendContentsOf"]
+- ["Ps11CVarArgType", "author"]
+- ["Ps11CVarArgType", "body"]
+- ["Ps11CVarArgType", "drawbacks"]
+- ["Ps11CVarArgType", "id"]
+- ["Ps11CVarArgType", "ignoredProperties"]
+- ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "map"]
+- ["Ps11CVarArgType", "primaryKey"]
+- ["Ps11CVarArgType", "productName"]
+- ["Ps11CVarArgType", "productType"]
+- ["Ps11CVarArgType", "recomended"]
+- !private ["Ps11CVarArgType", "removeAll"]
+- ["Ps11CVarArgType", "reviewDate"]
+- ["Ps11CVarArgType", "reviews"]
+- ["Ps11CVarArgType", "starsCount"]
+- !private ["Ps11CVarArgType", "stringByReplacingOccurrencesOfString"]
+- ["Ps11CVarArgType", "stringValue"]
+- ["Ps11CVarArgType", "thumbDownCount"]
+- ["Ps11CVarArgType", "thumbUpCount"]
+- ["Ps11CVarArgType", "toCSV"]
+- ["Ps11CVarArgType", "toString"]
+- ["Ps11CVarArgType", "toTxt"]
+- ["Ps11CVarArgType", ""]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps14CollectionType", "Element"]
+- ["Ps14CollectionType", "Generator"]
+- ["Ps14CollectionType", "Index"]
+- ["Ps14CollectionType", "SubSequence"]
+- ["Ps14CollectionType", "_Element"]
+- !private ["Ps14CollectionType", "appendContentsOf"]
+- ["Ps14CollectionType", "init"]
+- !private ["Ps14CollectionType", "map"]
+- !private ["Ps14CollectionType", "removeAll"]
+- ["Ps10Comparable", "Distance"]
+- ["Ps10Comparable", "IntegerLiteralType"]
+- ["Ps10Comparable", "_DisabledRangeIndex"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
+- ["Ps28CustomDebugStringConvertible", "Generator"]
+- ["Ps28CustomDebugStringConvertible", "Index"]
+- ["Ps28CustomDebugStringConvertible", "List"]
+- ["Ps28CustomDebugStringConvertible", "NSDate"]
+- !private ["Ps28CustomDebugStringConvertible", "RealmString"]
+- !private ["Ps28CustomDebugStringConvertible", "String"]
+- ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- ["Ps28CustomDebugStringConvertible", "_Element"]
+- ["Ps28CustomDebugStringConvertible", "_backingAdvantages"]
+- ["Ps28CustomDebugStringConvertible", "_backingDrawbacks"]
+- ["Ps28CustomDebugStringConvertible", "additionalDescription"]
+- ["Ps28CustomDebugStringConvertible", "advantages"]
+- !private ["Ps28CustomDebugStringConvertible", "appendContentsOf"]
+- ["Ps28CustomDebugStringConvertible", "author"]
+- ["Ps28CustomDebugStringConvertible", "body"]
+- ["Ps28CustomDebugStringConvertible", "drawbacks"]
+- ["Ps28CustomDebugStringConvertible", "id"]
+- ["Ps28CustomDebugStringConvertible", "ignoredProperties"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "map"]
+- ["Ps28CustomDebugStringConvertible", "primaryKey"]
+- ["Ps28CustomDebugStringConvertible", "productName"]
+- ["Ps28CustomDebugStringConvertible", "productType"]
+- ["Ps28CustomDebugStringConvertible", "recomended"]
+- !private ["Ps28CustomDebugStringConvertible", "removeAll"]
+- ["Ps28CustomDebugStringConvertible", "reviewDate"]
+- ["Ps28CustomDebugStringConvertible", "reviews"]
+- ["Ps28CustomDebugStringConvertible", "starsCount"]
+- !private ["Ps28CustomDebugStringConvertible", "stringByReplacingOccurrencesOfString"]
+- ["Ps28CustomDebugStringConvertible", "stringValue"]
+- ["Ps28CustomDebugStringConvertible", "thumbDownCount"]
+- ["Ps28CustomDebugStringConvertible", "thumbUpCount"]
+- ["Ps28CustomDebugStringConvertible", "toCSV"]
+- ["Ps28CustomDebugStringConvertible", "toString"]
+- ["Ps28CustomDebugStringConvertible", "toTxt"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "Distance"]
+- !private ["Ps23CustomStringConvertible", "Element"]
+- ["Ps23CustomStringConvertible", "Generator"]
+- ["Ps23CustomStringConvertible", "Index"]
+- ["Ps23CustomStringConvertible", "IntegerLiteralType"]
+- ["Ps23CustomStringConvertible", "List"]
+- ["Ps23CustomStringConvertible", "NSDate"]
+- !private ["Ps23CustomStringConvertible", "RealmString"]
+- !private ["Ps23CustomStringConvertible", "String"]
+- ["Ps23CustomStringConvertible", "SubSequence"]
+- ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
+- ["Ps23CustomStringConvertible", "_Element"]
+- ["Ps23CustomStringConvertible", "_backingAdvantages"]
+- ["Ps23CustomStringConvertible", "_backingDrawbacks"]
+- ["Ps23CustomStringConvertible", "additionalDescription"]
+- ["Ps23CustomStringConvertible", "advantages"]
+- !private ["Ps23CustomStringConvertible", "appendContentsOf"]
+- ["Ps23CustomStringConvertible", "author"]
+- ["Ps23CustomStringConvertible", "body"]
+- ["Ps23CustomStringConvertible", "drawbacks"]
+- ["Ps23CustomStringConvertible", "id"]
+- ["Ps23CustomStringConvertible", "ignoredProperties"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "map"]
+- ["Ps23CustomStringConvertible", "primaryKey"]
+- ["Ps23CustomStringConvertible", "productName"]
+- ["Ps23CustomStringConvertible", "productType"]
+- ["Ps23CustomStringConvertible", "recomended"]
+- !private ["Ps23CustomStringConvertible", "removeAll"]
+- ["Ps23CustomStringConvertible", "reviewDate"]
+- ["Ps23CustomStringConvertible", "reviews"]
+- ["Ps23CustomStringConvertible", "starsCount"]
+- !private ["Ps23CustomStringConvertible", "stringByReplacingOccurrencesOfString"]
+- ["Ps23CustomStringConvertible", "stringValue"]
+- ["Ps23CustomStringConvertible", "thumbDownCount"]
+- ["Ps23CustomStringConvertible", "thumbUpCount"]
+- ["Ps23CustomStringConvertible", "toCSV"]
+- ["Ps23CustomStringConvertible", "toString"]
+- ["Ps23CustomStringConvertible", "toTxt"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- ["Ps9Equatable", "Distance"]
+- ["Ps9Equatable", "Generator"]
+- ["Ps9Equatable", "Index"]
+- ["Ps9Equatable", "IntegerLiteralType"]
+- ["Ps9Equatable", "List"]
+- ["Ps9Equatable", "NSDate"]
+- !private ["Ps9Equatable", "RealmString"]
+- !private ["Ps9Equatable", "String"]
+- ["Ps9Equatable", "SubSequence"]
+- ["Ps9Equatable", "_DisabledRangeIndex"]
+- ["Ps9Equatable", "_Element"]
+- ["Ps9Equatable", "_backingAdvantages"]
+- ["Ps9Equatable", "_backingDrawbacks"]
+- ["Ps9Equatable", "additionalDescription"]
+- ["Ps9Equatable", "advantages"]
+- !private ["Ps9Equatable", "appendContentsOf"]
+- ["Ps9Equatable", "author"]
+- ["Ps9Equatable", "body"]
+- ["Ps9Equatable", "drawbacks"]
+- ["Ps9Equatable", "id"]
+- ["Ps9Equatable", "ignoredProperties"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "map"]
+- ["Ps9Equatable", "primaryKey"]
+- ["Ps9Equatable", "productName"]
+- ["Ps9Equatable", "productType"]
+- ["Ps9Equatable", "recomended"]
+- !private ["Ps9Equatable", "removeAll"]
+- ["Ps9Equatable", "reviewDate"]
+- ["Ps9Equatable", "reviews"]
+- ["Ps9Equatable", "starsCount"]
+- !private ["Ps9Equatable", "stringByReplacingOccurrencesOfString"]
+- ["Ps9Equatable", "stringValue"]
+- ["Ps9Equatable", "thumbDownCount"]
+- ["Ps9Equatable", "thumbUpCount"]
+- ["Ps9Equatable", "toCSV"]
+- ["Ps9Equatable", "toString"]
+- ["Ps9Equatable", "toTxt"]
+- ["Ps9Equatable", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "stringByReplacingOccurrencesOfString"]
+- !private ["Sf", "deinit"]
+- ["Ps16ForwardIndexType", "Distance"]
+- ["Ps16ForwardIndexType", "IntegerLiteralType"]
+- ["Ps16ForwardIndexType", "_DisabledRangeIndex"]
+- ["Ps13GeneratorType", "Element"]
+- ["Ps8Hashable", "Distance"]
+- ["Ps8Hashable", "Generator"]
+- ["Ps8Hashable", "Index"]
+- ["Ps8Hashable", "IntegerLiteralType"]
+- ["Ps8Hashable", "List"]
+- ["Ps8Hashable", "NSDate"]
+- !private ["Ps8Hashable", "RealmString"]
+- !private ["Ps8Hashable", "String"]
+- ["Ps8Hashable", "SubSequence"]
+- ["Ps8Hashable", "_DisabledRangeIndex"]
+- ["Ps8Hashable", "_Element"]
+- ["Ps8Hashable", "_backingAdvantages"]
+- ["Ps8Hashable", "_backingDrawbacks"]
+- ["Ps8Hashable", "additionalDescription"]
+- ["Ps8Hashable", "advantages"]
+- !private ["Ps8Hashable", "appendContentsOf"]
+- ["Ps8Hashable", "author"]
+- ["Ps8Hashable", "body"]
+- ["Ps8Hashable", "drawbacks"]
+- ["Ps8Hashable", "id"]
+- ["Ps8Hashable", "ignoredProperties"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "map"]
+- ["Ps8Hashable", "primaryKey"]
+- ["Ps8Hashable", "productName"]
+- ["Ps8Hashable", "productType"]
+- ["Ps8Hashable", "recomended"]
+- !private ["Ps8Hashable", "removeAll"]
+- ["Ps8Hashable", "reviewDate"]
+- ["Ps8Hashable", "reviews"]
+- ["Ps8Hashable", "starsCount"]
+- !private ["Ps8Hashable", "stringByReplacingOccurrencesOfString"]
+- ["Ps8Hashable", "stringValue"]
+- ["Ps8Hashable", "thumbDownCount"]
+- ["Ps8Hashable", "thumbUpCount"]
+- ["Ps8Hashable", "toCSV"]
+- ["Ps8Hashable", "toString"]
+- ["Ps8Hashable", "toTxt"]
+- ["Ps8Hashable", ""]
+- !private ["Ps9Indexable", "Element"]
+- ["Ps9Indexable", "Generator"]
+- ["Ps9Indexable", "Index"]
+- ["Ps9Indexable", "SubSequence"]
+- ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "appendContentsOf"]
+- ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "map"]
+- !private ["Ps9Indexable", "removeAll"]
+- !private ["Vs17IndexingGenerator", "Element"]
+- ["Si", "Distance"]
+- ["Si", "IntegerLiteralType"]
+- ["Si", "_DisabledRangeIndex"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- ["Ps21IntegerArithmeticType", "Distance"]
+- ["Ps21IntegerArithmeticType", "IntegerLiteralType"]
+- ["Ps21IntegerArithmeticType", "_DisabledRangeIndex"]
+- ["Ps25IntegerLiteralConvertible", "Distance"]
+- ["Ps25IntegerLiteralConvertible", "IntegerLiteralType"]
+- ["Ps25IntegerLiteralConvertible", "_DisabledRangeIndex"]
+- ["Ps11IntegerType", "Distance"]
+- ["Ps11IntegerType", "IntegerLiteralType"]
+- ["Ps11IntegerType", "_DisabledRangeIndex"]
+- ["C10RealmSwift4List", "Generator"]
+- ["C10RealmSwift4List", "Index"]
+- ["C10RealmSwift4List", "SubSequence"]
+- ["C10RealmSwift4List", "_Element"]
+- !private ["C10RealmSwift4List", "appendContentsOf"]
+- !private ["C10RealmSwift4List", "deinit"]
+- ["C10RealmSwift4List", "init"]
+- !private ["C10RealmSwift4List", "map"]
+- !private ["C10RealmSwift4List", "removeAll"]
+- ["C10RealmSwift8ListBase", "Generator"]
+- ["C10RealmSwift8ListBase", "Index"]
+- ["C10RealmSwift8ListBase", "SubSequence"]
+- ["C10RealmSwift8ListBase", "_Element"]
+- !private ["C10RealmSwift8ListBase", "appendContentsOf"]
+- !private ["C10RealmSwift8ListBase", "map"]
+- !private ["C10RealmSwift8ListBase", "removeAll"]
+- ["P10RealmSwift10MinMaxType", "Distance"]
+- ["P10RealmSwift10MinMaxType", "IntegerLiteralType"]
+- ["P10RealmSwift10MinMaxType", "_DisabledRangeIndex"]
+- ["P10RealmSwift10MinMaxType", "init"]
+- ["Ps14MirrorPathType", "Distance"]
+- ["Ps14MirrorPathType", "IntegerLiteralType"]
+- ["Ps14MirrorPathType", "_DisabledRangeIndex"]
+- !private ["Ps14MirrorPathType", "init"]
+- !private ["Ps21MutableCollectionType", "Element"]
+- !private ["Ps21MutableCollectionType", "Generator"]
+- !private ["Ps21MutableCollectionType", "Index"]
+- !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
+- !private ["Ps21MutableCollectionType", "map"]
+- !private ["Ps16MutableIndexable", "Element"]
+- !private ["Ps16MutableIndexable", "Generator"]
+- !private ["Ps16MutableIndexable", "Index"]
+- !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
+- !private ["Ps16MutableIndexable", "map"]
+- !private ["Ps16MutableSliceable", "Element"]
+- !private ["Ps16MutableSliceable", "Generator"]
+- !private ["Ps16MutableSliceable", "Index"]
+- !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
+- !private ["Ps16MutableSliceable", "map"]
+- ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "stringByReplacingOccurrencesOfString"]
+- ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "stringByReplacingOccurrencesOfString"]
+- !private ["CSo6NSDate", "deinit"]
+- ["CSo6NSDate", "init"]
+- ["PSo17NSFastEnumeration", "Generator"]
+- ["PSo17NSFastEnumeration", "Index"]
+- ["PSo17NSFastEnumeration", "SubSequence"]
+- ["PSo17NSFastEnumeration", "_Element"]
+- !private ["PSo17NSFastEnumeration", "appendContentsOf"]
+- ["PSo17NSFastEnumeration", "init"]
+- !private ["PSo17NSFastEnumeration", "map"]
+- !private ["PSo17NSFastEnumeration", "removeAll"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "stringByReplacingOccurrencesOfString"]
+- ["CSo8NSObject", "Generator"]
+- ["CSo8NSObject", "Index"]
+- ["CSo8NSObject", "List"]
+- ["CSo8NSObject", "NSDate"]
+- !private ["CSo8NSObject", "NSString"]
+- ["CSo8NSObject", "RealmString"]
+- ["CSo8NSObject", "Review"]
+- ["CSo8NSObject", "String"]
+- ["CSo8NSObject", "SubSequence"]
+- ["CSo8NSObject", "_Element"]
+- ["CSo8NSObject", "_backingAdvantages"]
+- ["CSo8NSObject", "_backingDrawbacks"]
+- ["CSo8NSObject", "additionalDescription"]
+- ["CSo8NSObject", "advantages"]
+- !private ["CSo8NSObject", "appendContentsOf"]
+- ["CSo8NSObject", "author"]
+- ["CSo8NSObject", "body"]
+- !private ["CSo8NSObject", "deinit"]
+- ["CSo8NSObject", "drawbacks"]
+- ["CSo8NSObject", "id"]
+- ["CSo8NSObject", "ignoredProperties"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "map"]
+- ["CSo8NSObject", "primaryKey"]
+- ["CSo8NSObject", "productName"]
+- ["CSo8NSObject", "productType"]
+- ["CSo8NSObject", "recomended"]
+- !private ["CSo8NSObject", "removeAll"]
+- ["CSo8NSObject", "reviewDate"]
+- ["CSo8NSObject", "reviews"]
+- ["CSo8NSObject", "starsCount"]
+- !private ["CSo8NSObject", "stringByReplacingOccurrencesOfString"]
+- ["CSo8NSObject", "stringValue"]
+- ["CSo8NSObject", "thumbDownCount"]
+- ["CSo8NSObject", "thumbUpCount"]
+- ["CSo8NSObject", "toCSV"]
+- ["CSo8NSObject", "toString"]
+- ["CSo8NSObject", "toTxt"]
+- ["PSo16NSObjectProtocol", "Generator"]
+- ["PSo16NSObjectProtocol", "Index"]
+- ["PSo16NSObjectProtocol", "List"]
+- ["PSo16NSObjectProtocol", "NSDate"]
+- !private ["PSo16NSObjectProtocol", "RealmString"]
+- !private ["PSo16NSObjectProtocol", "String"]
+- ["PSo16NSObjectProtocol", "SubSequence"]
+- ["PSo16NSObjectProtocol", "_Element"]
+- ["PSo16NSObjectProtocol", "_backingAdvantages"]
+- ["PSo16NSObjectProtocol", "_backingDrawbacks"]
+- ["PSo16NSObjectProtocol", "additionalDescription"]
+- ["PSo16NSObjectProtocol", "advantages"]
+- !private ["PSo16NSObjectProtocol", "appendContentsOf"]
+- ["PSo16NSObjectProtocol", "author"]
+- ["PSo16NSObjectProtocol", "body"]
+- ["PSo16NSObjectProtocol", "drawbacks"]
+- ["PSo16NSObjectProtocol", "id"]
+- ["PSo16NSObjectProtocol", "ignoredProperties"]
+- ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "map"]
+- ["PSo16NSObjectProtocol", "primaryKey"]
+- ["PSo16NSObjectProtocol", "productName"]
+- ["PSo16NSObjectProtocol", "productType"]
+- ["PSo16NSObjectProtocol", "recomended"]
+- !private ["PSo16NSObjectProtocol", "removeAll"]
+- ["PSo16NSObjectProtocol", "reviewDate"]
+- ["PSo16NSObjectProtocol", "reviews"]
+- ["PSo16NSObjectProtocol", "starsCount"]
+- !private ["PSo16NSObjectProtocol", "stringByReplacingOccurrencesOfString"]
+- ["PSo16NSObjectProtocol", "stringValue"]
+- ["PSo16NSObjectProtocol", "thumbDownCount"]
+- ["PSo16NSObjectProtocol", "thumbUpCount"]
+- ["PSo16NSObjectProtocol", "toCSV"]
+- ["PSo16NSObjectProtocol", "toString"]
+- ["PSo16NSObjectProtocol", "toTxt"]
+- ["PSo16NSObjectProtocol", ""]
+- ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "stringByReplacingOccurrencesOfString"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "stringByReplacingOccurrencesOfString"]
+- ["C10RealmSwift6Object", "List"]
+- ["C10RealmSwift6Object", "NSDate"]
+- !private ["C10RealmSwift6Object", "NSString"]
+- ["C10RealmSwift6Object", "RealmString"]
+- ["C10RealmSwift6Object", "Review"]
+- ["C10RealmSwift6Object", "String"]
+- ["C10RealmSwift6Object", "_backingAdvantages"]
+- ["C10RealmSwift6Object", "_backingDrawbacks"]
+- ["C10RealmSwift6Object", "additionalDescription"]
+- ["C10RealmSwift6Object", "advantages"]
+- ["C10RealmSwift6Object", "author"]
+- ["C10RealmSwift6Object", "body"]
+- ["C10RealmSwift6Object", "drawbacks"]
+- ["C10RealmSwift6Object", "id"]
+- ["C10RealmSwift6Object", "ignoredProperties"]
+- ["C10RealmSwift6Object", "init"]
+- ["C10RealmSwift6Object", "primaryKey"]
+- ["C10RealmSwift6Object", "productName"]
+- ["C10RealmSwift6Object", "productType"]
+- ["C10RealmSwift6Object", "recomended"]
+- ["C10RealmSwift6Object", "reviewDate"]
+- ["C10RealmSwift6Object", "reviews"]
+- ["C10RealmSwift6Object", "starsCount"]
+- ["C10RealmSwift6Object", "stringValue"]
+- ["C10RealmSwift6Object", "thumbDownCount"]
+- ["C10RealmSwift6Object", "thumbUpCount"]
+- ["C10RealmSwift6Object", "toCSV"]
+- ["C10RealmSwift6Object", "toString"]
+- ["C10RealmSwift6Object", "toTxt"]
+- ["C10RealmSwift6Object", ""]
+- !private ["Sq", "deinit"]
+- !private ["Ps16OutputStreamType", "init"]
+- ["C12ETLHurtownie7Product", "List"]
+- ["C12ETLHurtownie7Product", "Review"]
+- ["C12ETLHurtownie7Product", "String"]
+- ["C12ETLHurtownie7Product", "additionalDescription"]
+- ["C12ETLHurtownie7Product", "deinit"]
+- ["C12ETLHurtownie7Product", "id"]
+- ["C12ETLHurtownie7Product", "init"]
+- ["C12ETLHurtownie7Product", "primaryKey"]
+- ["C12ETLHurtownie7Product", "productName"]
+- ["C12ETLHurtownie7Product", "productType"]
+- ["C12ETLHurtownie7Product", "reviews"]
+- ["C12ETLHurtownie7Product", "toCSV"]
+- ["C12ETLHurtownie7Product", "toTxt"]
+- ["C10RealmSwift12RLMGenerator", "Element"]
+- ["CSo11RLMListBase", "Generator"]
+- ["CSo11RLMListBase", "Index"]
+- ["CSo11RLMListBase", "SubSequence"]
+- ["CSo11RLMListBase", "_Element"]
+- !private ["CSo11RLMListBase", "appendContentsOf"]
+- !private ["CSo11RLMListBase", "map"]
+- !private ["CSo11RLMListBase", "removeAll"]
+- ["CSo13RLMObjectBase", "List"]
+- ["CSo13RLMObjectBase", "NSDate"]
+- !private ["CSo13RLMObjectBase", "NSString"]
+- ["CSo13RLMObjectBase", "RealmString"]
+- ["CSo13RLMObjectBase", "Review"]
+- ["CSo13RLMObjectBase", "String"]
+- ["CSo13RLMObjectBase", "_backingAdvantages"]
+- ["CSo13RLMObjectBase", "_backingDrawbacks"]
+- ["CSo13RLMObjectBase", "additionalDescription"]
+- ["CSo13RLMObjectBase", "advantages"]
+- ["CSo13RLMObjectBase", "author"]
+- ["CSo13RLMObjectBase", "body"]
+- ["CSo13RLMObjectBase", "drawbacks"]
+- ["CSo13RLMObjectBase", "id"]
+- ["CSo13RLMObjectBase", "ignoredProperties"]
+- ["CSo13RLMObjectBase", "init"]
+- ["CSo13RLMObjectBase", "primaryKey"]
+- ["CSo13RLMObjectBase", "productName"]
+- ["CSo13RLMObjectBase", "productType"]
+- ["CSo13RLMObjectBase", "recomended"]
+- ["CSo13RLMObjectBase", "reviewDate"]
+- ["CSo13RLMObjectBase", "reviews"]
+- ["CSo13RLMObjectBase", "starsCount"]
+- ["CSo13RLMObjectBase", "stringValue"]
+- ["CSo13RLMObjectBase", "thumbDownCount"]
+- ["CSo13RLMObjectBase", "thumbUpCount"]
+- ["CSo13RLMObjectBase", "toCSV"]
+- ["CSo13RLMObjectBase", "toString"]
+- ["CSo13RLMObjectBase", "toTxt"]
+- ["Ps21RandomAccessIndexType", "Distance"]
+- ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
+- ["Ps21RandomAccessIndexType", "_DisabledRangeIndex"]
+- !private ["Ps30RangeReplaceableCollectionType", "Element"]
+- ["Ps30RangeReplaceableCollectionType", "Generator"]
+- ["Ps30RangeReplaceableCollectionType", "Index"]
+- ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- ["Ps30RangeReplaceableCollectionType", "_Element"]
+- !private ["Ps30RangeReplaceableCollectionType", "appendContentsOf"]
+- ["Ps30RangeReplaceableCollectionType", "init"]
+- !private ["Ps30RangeReplaceableCollectionType", "map"]
+- !private ["Ps30RangeReplaceableCollectionType", "removeAll"]
+- ["P10RealmSwift19RealmCollectionType", "Generator"]
+- ["P10RealmSwift19RealmCollectionType", "Index"]
+- ["P10RealmSwift19RealmCollectionType", "SubSequence"]
+- ["P10RealmSwift19RealmCollectionType", "_Element"]
+- !private ["P10RealmSwift19RealmCollectionType", "appendContentsOf"]
+- ["P10RealmSwift19RealmCollectionType", "init"]
+- !private ["P10RealmSwift19RealmCollectionType", "map"]
+- !private ["P10RealmSwift19RealmCollectionType", "removeAll"]
+- ["P10RealmSwift17RealmOptionalType", "Distance"]
+- ["P10RealmSwift17RealmOptionalType", "IntegerLiteralType"]
+- ["P10RealmSwift17RealmOptionalType", "_DisabledRangeIndex"]
+- ["C12ETLHurtownie11RealmString", "deinit"]
+- ["C12ETLHurtownie11RealmString", "init"]
+- ["C12ETLHurtownie11RealmString", "stringValue"]
+- ["C12ETLHurtownie6Review", "List"]
+- ["C12ETLHurtownie6Review", "NSDate"]
+- !private ["C12ETLHurtownie6Review", "NSString"]
+- ["C12ETLHurtownie6Review", "RealmString"]
+- ["C12ETLHurtownie6Review", "String"]
+- ["C12ETLHurtownie6Review", "_backingAdvantages"]
+- ["C12ETLHurtownie6Review", "_backingDrawbacks"]
+- ["C12ETLHurtownie6Review", "advantages"]
+- ["C12ETLHurtownie6Review", "author"]
+- ["C12ETLHurtownie6Review", "body"]
+- ["C12ETLHurtownie6Review", "deinit"]
+- ["C12ETLHurtownie6Review", "drawbacks"]
+- ["C12ETLHurtownie6Review", "id"]
+- ["C12ETLHurtownie6Review", "ignoredProperties"]
+- ["C12ETLHurtownie6Review", "init"]
+- ["C12ETLHurtownie6Review", "primaryKey"]
+- ["C12ETLHurtownie6Review", "recomended"]
+- ["C12ETLHurtownie6Review", "reviewDate"]
+- ["C12ETLHurtownie6Review", "starsCount"]
+- ["C12ETLHurtownie6Review", "thumbDownCount"]
+- ["C12ETLHurtownie6Review", "thumbUpCount"]
+- ["C12ETLHurtownie6Review", "toCSV"]
+- ["C12ETLHurtownie6Review", "toString"]
+- !private ["Ps12SequenceType", "Element"]
+- ["Ps12SequenceType", "Generator"]
+- ["Ps12SequenceType", "Index"]
+- ["Ps12SequenceType", "SubSequence"]
+- ["Ps12SequenceType", "_Element"]
+- !private ["Ps12SequenceType", "appendContentsOf"]
+- ["Ps12SequenceType", "init"]
+- !private ["Ps12SequenceType", "map"]
+- !private ["Ps12SequenceType", "removeAll"]
+- ["Ps17SignedIntegerType", "Distance"]
+- ["Ps17SignedIntegerType", "IntegerLiteralType"]
+- ["Ps17SignedIntegerType", "_DisabledRangeIndex"]
+- ["Ps16SignedNumberType", "Distance"]
+- ["Ps16SignedNumberType", "IntegerLiteralType"]
+- ["Ps16SignedNumberType", "_DisabledRangeIndex"]
+- ["Vs5Slice", "Generator"]
+- ["Vs5Slice", "Index"]
+- !private ["Ps10Streamable", "init"]
+- ["Ps10Strideable", "Distance"]
+- ["Ps10Strideable", "IntegerLiteralType"]
+- ["Ps10Strideable", "_DisabledRangeIndex"]
+- !private ["SS", "deinit"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "stringByReplacingOccurrencesOfString"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "stringByReplacingOccurrencesOfString"]
+- !private ["Ps10_ArrayType", "Element"]
+- !private ["Ps10_ArrayType", "Generator"]
+- !private ["Ps10_ArrayType", "Index"]
+- !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
+- !private ["Ps10_ArrayType", "map"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "Distance"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
+- !private ["Ps24_DestructorSafeContainer", "Generator"]
+- !private ["Ps24_DestructorSafeContainer", "Index"]
+- !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
+- !private ["Ps24_DestructorSafeContainer", "map"]
+- ["Ps14_Incrementable", "Distance"]
+- ["Ps14_Incrementable", "IntegerLiteralType"]
+- ["Ps14_Incrementable", "_DisabledRangeIndex"]
+- ["Ps22_IntegerArithmeticType", "Distance"]
+- ["Ps22_IntegerArithmeticType", "IntegerLiteralType"]
+- ["Ps22_IntegerArithmeticType", "_DisabledRangeIndex"]
+- ["Ps12_IntegerType", "Distance"]
+- ["Ps12_IntegerType", "IntegerLiteralType"]
+- ["Ps12_IntegerType", "_DisabledRangeIndex"]
+- ["Ps21_ObjectiveCBridgeable", "Distance"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "Generator"]
+- !private ["Ps21_ObjectiveCBridgeable", "Index"]
+- ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
+- !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- ["Ps21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "map"]
+- ["Ps22_RandomAccessAmbiguity", "Distance"]
+- ["Ps22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- ["Ps22_RandomAccessAmbiguity", "_DisabledRangeIndex"]
+- ["Ps12_Reflectable", "Distance"]
+- !private ["Ps12_Reflectable", "Element"]
+- !private ["Ps12_Reflectable", "Generator"]
+- !private ["Ps12_Reflectable", "Index"]
+- ["Ps12_Reflectable", "IntegerLiteralType"]
+- !private ["Ps12_Reflectable", "SubSequence"]
+- ["Ps12_Reflectable", "_DisabledRangeIndex"]
+- !private ["Ps12_Reflectable", "_Element"]
+- ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "map"]
+- !private ["Ps12_Reflectable", "stringByReplacingOccurrencesOfString"]
+- ["Ps18_SignedIntegerType", "Distance"]
+- ["Ps18_SignedIntegerType", "IntegerLiteralType"]
+- ["Ps18_SignedIntegerType", "_DisabledRangeIndex"]
+depends-nominal:
+- "P10RealmSwift11AddableType"
+- "Ps9AnyObject"
+- !private "Sa"
+- !private "Ps23ArrayLiteralConvertible"
+- !private "Vs10ArraySlice"
+- "Ps22BidirectionalIndexType"
+- "Ps21BitwiseOperationsType"
+- !private "Sb"
+- "Ps11CVarArgType"
+- !private "Vs9Character"
+- "Ps14CollectionType"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- "Ps16ForwardIndexType"
+- "Ps13GeneratorType"
+- "Ps8Hashable"
+- "Ps9Indexable"
+- !private "Vs17IndexingGenerator"
+- "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- "Ps21IntegerArithmeticType"
+- "Ps25IntegerLiteralConvertible"
+- "Ps11IntegerType"
+- "C10RealmSwift4List"
+- "C10RealmSwift8ListBase"
+- "P10RealmSwift10MinMaxType"
+- "Ps14MirrorPathType"
+- !private "Ps21MutableCollectionType"
+- !private "Ps16MutableIndexable"
+- !private "Ps16MutableSliceable"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "CSo6NSDate"
+- "PSo17NSFastEnumeration"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- "C10RealmSwift6Object"
+- !private "Sq"
+- !private "Ps16OutputStreamType"
+- "C12ETLHurtownie7Product"
+- "C10RealmSwift12RLMGenerator"
+- "CSo11RLMListBase"
+- "CSo13RLMObjectBase"
+- "Ps21RandomAccessIndexType"
+- "Ps30RangeReplaceableCollectionType"
+- "P10RealmSwift19RealmCollectionType"
+- "P10RealmSwift17RealmOptionalType"
+- "C12ETLHurtownie11RealmString"
+- "C12ETLHurtownie6Review"
+- "Ps12SequenceType"
+- "Ps17SignedIntegerType"
+- "Ps16SignedNumberType"
+- "Vs5Slice"
+- !private "Ps10Streamable"
+- "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Ps10_ArrayType"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "Ps24_DestructorSafeContainer"
+- "Ps14_Incrementable"
+- "Ps22_IntegerArithmeticType"
+- "Ps12_IntegerType"
+- "Ps21_ObjectiveCBridgeable"
+- "Ps22_RandomAccessAmbiguity"
+- "Ps12_Reflectable"
+- "Ps18_SignedIntegerType"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/RealmSwift.framework/Modules/RealmSwift.swiftmodule/arm64.swiftmodule"
+- "./Realm.framework/Headers/RLMRealm_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMSyncUtil_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMSyncConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMSchema_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMResults_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealm_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMRealmConfiguration_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMProperty_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMOptionalBase.h"
+- "./Realm.framework/PrivateHeaders/RLMObject_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectStore.h"
+- "./Realm.framework/PrivateHeaders/RLMObjectSchema_Private.h"
+- "./Realm.framework/Headers/RLMObjectBase_Dynamic.h"
+- "./Realm.framework/PrivateHeaders/RLMListBase.h"
+- "./Realm.framework/PrivateHeaders/RLMArray_Private.h"
+- "./Realm.framework/PrivateHeaders/RLMAccessor.h"
+- "./Realm.framework/Headers/RLMSyncUser.h"
+- "./Realm.framework/Headers/RLMSyncSession.h"
+- "./Realm.framework/Headers/RLMSyncPermissionChange.h"
+- "./Realm.framework/Headers/RLMSyncManager.h"
+- "./Realm.framework/Headers/RLMSyncCredentials.h"
+- "./Realm.framework/Headers/RLMSyncConfiguration.h"
+- "./Realm.framework/Headers/RLMSchema.h"
+- "./Realm.framework/Headers/RLMResults.h"
+- "./Realm.framework/Headers/RLMSyncUtil.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration+Sync.h"
+- "./Realm.framework/Headers/RLMRealmConfiguration.h"
+- "./Realm.framework/Headers/RLMRealm.h"
+- "./Realm.framework/Headers/RLMConstants.h"
+- "./Realm.framework/Headers/RLMProperty.h"
+- "./Realm.framework/Headers/RLMPlatform.h"
+- "./Realm.framework/Headers/RLMObjectSchema.h"
+- "./Realm.framework/Headers/RLMObjectBase.h"
+- "./Realm.framework/Headers/RLMObject.h"
+- "./Realm.framework/Headers/RLMMigration.h"
+- "./Realm.framework/Headers/RLMCollection.h"
+- "./Realm.framework/Headers/RLMArray.h"
+- "./Realm.framework/Headers/Realm.h"
+- "./Realm.framework/Modules/module.modulemap"
+interface-hash: "224e4281f7a2d88e8380689ddf364487"
