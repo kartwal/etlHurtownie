@@ -48,7 +48,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDelegate, UITab
         
         reviewString = ""
         
-        reviewString += "Autor opinii: " + product.reviews[indexPath.row].author.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) + "\n"
+        reviewString += "Autor opinii: " + product.reviews[indexPath.row].author + "\n"
 
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -56,14 +56,13 @@ class ProductDetailsViewController: UIViewController, UITableViewDelegate, UITab
 
         reviewString += "Rekomendacja: " + String(product.reviews[indexPath.row].recomended) + "\n"
         
-        reviewString += "Opinia: " + product.reviews[indexPath.row].body.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-
+        reviewString += "Opinia: " + product.reviews[indexPath.row].body
         if product.reviews[indexPath.row].advantages.count > 0
         {
             reviewString += "\n\nZalety: \n"
             for item in product.reviews[indexPath.row].advantages
             {
-                reviewString += item.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) + "\n"
+                reviewString += item + "\n"
             }
         }
         reviewString += "\n"
@@ -73,7 +72,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDelegate, UITab
             reviewString += "Wady: \n"
             for item in product.reviews[indexPath.row].drawbacks
             {
-                reviewString += item.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()) + "\n"
+                reviewString += item + "\n"
             }
         }
 

@@ -49,54 +49,41 @@ class Review : Object
     override static func ignoredProperties() -> [String] {
         return ["drawbacks", "advantages"]
     }
-//    public String toCSV (){
-//    String drawbacksString = "";
-//    for (RealmString string : drawbacks){
-//    drawbacksString = drawbacksString + " " + string.toString();
-//    }
-//    
-//    String advantagesString = "";
-//    for (RealmString string : advantages){
-//    advantagesString = advantagesString + " " + string.toString();
-//    }
-//    String csv = id + "," + drawbacksString.replace(",", ";") + "," + advantagesString.replace(",", ";") + "," + body.replace(",", ";") + "," + starsCount + "," + author.replace(",", ";") + "," + reviewDate + "," + recommend + "," + thumbUpCount + "," + thumbDownCount + "\n";
-//    return csv;
-//    }
-    
-//    public String toString() {
-//    return "Review{" +
-//    "\t" + "id=" + id + "\n" +
-//    "\t" +", drawbacks=" + drawbacks +"\n" +
-//    "\t" +", advantages=" + advantages +"\n" +
-//    "\t" +", body='" + body + '\'' +"\n" +
-//    "\t" +", starsCount=" + starsCount +"\n" +
-//    "\t" +", author='" + author + '\'' +"\n" +
-//    "\t" +", reviewDate=" + reviewDate +"\n" +
-//    "\t" +", recommend=" + recommend +"\n" +
-//    "\t" +", thumbUpCount=" + thumbUpCount +"\n" +
-//    "\t" +", thumbDownCount=" + thumbDownCount +"\n" +
-//    '}';
-//    }
     
     func toString() -> String
     {
-//        return "Review{" +
-//            "\t" + "id=" + String(id) + "\n" +
-//            "\t" + ", drawbacks=" + drawbacks + "\n" +
-//            "\t" + ", advantages=" + advantages + "\n" +
-//            "\t" + ", body='" + body + "'" + "\n" +
-//            "\t" + ", starsCount=" + starsCount + "\n" +
-//            "\t" + ", author='" + author + "'" + "\n" +
-//            "\t" + ", reviewDate=" + reviewDate + "\n" +
-//            "\t" + ", recommend=" + String(recomended) + "\n" +
-//            "\t" + ", thumbUpCount=" + thumbUpCount + "\n" +
-//            "\t" + ", thumbDownCount=" + thumbDownCount + "\n" +
-//            "}"
-        return ""
+        var drawbacksString = ""
+        for item in drawbacks
+        {
+            drawbacksString += item + ","
+        }
+        var advantagesString = ""
+        for item in advantages
+        {
+            advantagesString += item + ","
+        }
+        
+            var stringReview = "Review{" + "\t" + "id=" + String(id) + "\n" + "\t" + ", drawbacks=" + drawbacksString + "\n" +
+                "\t" + ", advantages=" + advantagesString + "\n" +
+                "\t" + ", body='" + body + "'" + "\n"
+                "\t, starsCount= \(starsCount)"
+    
+            stringReview += "\n" +
+                "\t" + ", author='" + author + "'" + "\n" +
+                "\t" + ", reviewDate=" + String(reviewDate) + "\n" +
+                "\t" + ", recommend=" + String(recomended) + "\n"
+
+            stringReview += "\t" + ", thumbUpCount=" + String(thumbUpCount) + "\n"
+        
+            stringReview += "\t" + ", thumbDownCount=" + String(thumbDownCount) + "\n"
+        
+            return stringReview
+    
     }
-    func toCSV() -> String
+    func toCSV(reviewString : String) -> String
     {
-        return ""
+        let replaced = (reviewString as NSString).stringByReplacingOccurrencesOfString(",", withString: ":")
+        return replaced
     }
 
 }
@@ -113,38 +100,28 @@ class Product : Object
         return "id"
     }
     
-//    public String toCSV(){
-//    String csv = "# Product data\n";
-//    csv = csv + "# id produktu: " + id + "\n";
-//    csv = csv + "# nazwa produktu: " + productName + "\n";
-//    csv = csv + "# rodzaj: " + productType + "\n";
-//    csv = csv + "# dodatkowy opis: " + additionalDescription + "\n";
-//    csv = csv + "id opinii, wady, zalety, treść, ocena, autor, data opinii, polecany, +, -\n";
-//    for (Review review : reviews){
-//    csv = csv + review.toCSV();
-//    }
-//    return csv;
-//    }
     func toCSV() -> String
     {
-        let part1 = "# Product data\n:" + "#nazwa produktu: " + String(id) + "\n#rodzaj: " + productType + "\n#dodatkowy opis: " + additionalDescription + "\nid opinii, wady, zalety, treść, ocena, autor, data opinii, polecany, +, -\n"
-
+        var part1 = "# Product data\n:" + "#nazwa produktu: " + String(id) + "\n#rodzaj: " + productType + "\n#dodatkowy opis: " + additionalDescription + "\n"
         for reviewString in reviews
         {
-            
+            part1 += reviewString.toCSV(reviewString.toString())
         }
         
-        
         return part1
-        
     }
 
     func toTxt() -> String
     {
+        var part1 = "Opinia: "
+        for reviewString in reviews
+        {
+            part1 += reviewString.toString()
+        }
         return "id produktu: " + String(id) +
             "\nnazwa produktu: " + productName +
             "\nrodzaj: " + additionalDescription +
-            "\ndodatkowy opis: " + additionalDescription + "\n"
+            "\ndodatkowy opis: " + additionalDescription + "\n" + part1 + "\n\n\n"
     }
     
 }

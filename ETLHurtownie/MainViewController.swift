@@ -11,8 +11,9 @@ import AZDropdownMenu
 import Alamofire
 import HTMLReader
 import RealmSwift
+import QuickLook
 
-class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelegate {
+class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelegate, QLPreviewControllerDataSource {
 
     var menu : AZDropdownMenu?
     
@@ -44,9 +45,12 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         return busyAlert
     }()
     
+    var selectedOption = 0
+    
+    var quickLookController = QLPreviewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         prepareRoundedButton(eProcessOutlet)
         prepareRoundedButton(tProcessOutlet)
         prepareRoundedButton(lProcessOutlet)
@@ -72,15 +76,75 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             switch indexPath.row {
             case 0:
                 print("eksport cvs")
+                self.selectedOption = 0
+                self.quickLookController = QLPreviewController()
+                self.quickLookController.dataSource = self
+                dispatch_async(dispatch_get_main_queue(), {
+                    
+                    let realm = try! Realm()
+                    let productRealm = realm.objects(Product)
+                    
+                    var csvString = ""
+                    for item in productRealm
+                    {
+                        csvString += item.toCSV() + "\n"
+                    }
+                    
+                    if let dir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
+                        let path = NSURL(fileURLWithPath: dir).URLByAppendingPathComponent("products.csv")
+                        
+                        //writing
+                        do {
+                            try csvString.writeToURL(path, atomically: false, encoding: NSUTF8StringEncoding)
+                        }
+                        catch {/* error handling here */}
+                        
+                        if QLPreviewController.canPreviewItem(path) {
+                            self.quickLookController.currentPreviewItemIndex = 0
+                            self.navigationController?.pushViewController(self.quickLookController, animated: true)
+                        }
+                    }
+                })
+                
             case 1:
                 print("eksport txt")
+                self.selectedOption = 1
+                self.quickLookController = QLPreviewController()
+                self.quickLookController.dataSource = self
+                dispatch_async(dispatch_get_main_queue(), {
+                    
+                    let realm = try! Realm()
+                    let productRealm = realm.objects(Product)
+                    
+                    var csvString = ""
+                    for item in productRealm
+                    {
+                        csvString += item.toCSV() + "\n"
+                    }
+                    
+                    if let dir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first {
+                        let path = NSURL(fileURLWithPath: dir).URLByAppendingPathComponent("products.txt")
+                        
+                        //writing
+                        do {
+                            try csvString.writeToURL(path, atomically: false, encoding: NSUTF8StringEncoding)
+                        }
+                        catch {/* error handling here */}
+                        
+                        if QLPreviewController.canPreviewItem(path) {
+                            self.quickLookController.currentPreviewItemIndex = 0
+                            self.navigationController?.pushViewController(self.quickLookController, animated: true)
+                        }
+                    }
+                })
             case 2:
-                print("kupa")
                 dispatch_async(dispatch_get_main_queue(), {
                     let realm = try! Realm()
                     try! realm.write {
                         realm.deleteAll()
                     }
+                    self.removeFile("product", fileExtension: "txt")
+                    self.removeFile("product", fileExtension: "csv")
 
                     dispatch_async(dispatch_get_main_queue(), {
                         let alert = UIAlertController(title: "Informacja", message: "Dane zostały usunięte", preferredStyle: .Alert)
@@ -140,8 +204,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         busyAlertController = BusyAlert(title: "Trwa process Extract\n\n", message: "", presentingViewController: self)
         busyAlertController.display()
         logTextView.text = logTextView.text + "Rozpoczęto proces Extract\n"
-//        let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
-//        logTextView.scrollRangeToVisible(range)
+
         if let typedId = urlTextField.text
         {
             downloadReviews(baseURL, productID: typedId, automatic: false)
@@ -159,8 +222,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         busyAlertController = BusyAlert(title: "Trwa process proces Transform\n\n", message: "", presentingViewController: self)
         busyAlertController.display()
         logTextView.text = logTextView.text + "Rozpoczęto proces Transform\n"
-//        let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
-//        logTextView.scrollRangeToVisible(range)
+
         transformReviews(urlTextField.text!, automatic: false)
     }
     
@@ -169,8 +231,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         busyAlertController = BusyAlert(title: "Trwa process proces Load\n\n", message: "", presentingViewController: self)
         busyAlertController.display()
         logTextView.text = logTextView.text + "Rozpoczęto proces Load\n"
-//        let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
-//        logTextView.scrollRangeToVisible(range)
+
         loadDataProcess(finalProduct, automatic: false)
     }
     
@@ -232,9 +293,6 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                 logTextView.text = logTextView.text + "✅ Zakończono proces Extract\n⬇️Pobranych zostało \(downloadedHtmls.count) plików\n"
             }
             
-//            let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
-//            logTextView.scrollRangeToVisible(range)
-            
             if automatic == false
             {
                 tProcessOutlet.enabled = true
@@ -245,13 +303,10 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                 if let typedId = urlTextField.text
                 {
                     transformReviews(typedId, automatic: true)
-
-                    
                 }
                 else
                 {
                     transformReviews("", automatic: true)
-
                 }
             }
         }
@@ -263,8 +318,6 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         let product = Product()
         let reviews = List<Review>()
         
-
-        
         if productID == ""
         {
             product.id = 0
@@ -274,7 +327,6 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
            product.id = Int(productID)!
         }
         
-        
         if downloadedHtmls.count > 0
         {
             let document = downloadedHtmls[0]
@@ -282,20 +334,19 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                 
                 if item.objectForKeyedSubscript("property") as? String == "og:title"
                 {
-                    var testString = item.objectForKeyedSubscript("content") as! String
-                    testString.removeRange(testString.rangeOfString("- Ceny i opinie")!)
-                    print(testString)
-                    product.productName = testString
+                    let stringItem = item.objectForKeyedSubscript("content") as! String
+                    product.productName = stringItem.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                 }
                 
                 if item.objectForKeyedSubscript("property") as? String == "og:type"
                 {
-                    product.productType = item.objectForKeyedSubscript("content") as! String
-                }
+                    let stringItem = item.objectForKeyedSubscript("content") as! String
+                    product.productType = stringItem.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())                }
                 
                 if item.objectForKeyedSubscript("property") as? String == "og:description"
                 {
-                    product.additionalDescription = item.objectForKeyedSubscript("content") as! String
+                    let stringItem = item.objectForKeyedSubscript("content") as! String
+                    product.additionalDescription = stringItem.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                 }
             }
         }
@@ -335,7 +386,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                             for pro in items.nodesMatchingSelector("li")
                             {
                                 print(pro.textContent)
-                                advan.append(pro.textContent)
+                                advan.append(pro.textContent.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
                             }
                         }
                         
@@ -343,13 +394,13 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                         {
                             for con in items.nodesMatchingSelector("li")
                             {
-                                drawb.append(con.textContent)
+                                drawb.append(con.textContent.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
                             }
                         }
                         
                         if items.hasClass("product-reviewer")
                         {
-                            review.author = items.textContent
+                            review.author = items.textContent.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                         }
                         
                         for span in items.nodesMatchingSelector("span")
@@ -370,7 +421,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
                             if body.hasClass("product-review-body") && isFirst == false
                             {
                                 print(body.textContent)
-                                review.body = body.textContent
+                                review.body = body.textContent.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                                 let dateFormatter = NSDateFormatter()
                                 dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
                                 review.reviewDate = dateFormatter.dateFromString(item.firstNodeMatchingSelector("time")?.objectForKeyedSubscript("datetime") as! String)!
@@ -399,8 +450,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         
         product.reviews = reviews
         logTextView.text = logTextView.text + "✅Zakończono proces Transform\n✳️Dodano \(reviews.count) opinii\n"
-//        let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
-//        logTextView.scrollRangeToVisible(range)
+
         if automatic == false
         {
             tProcessOutlet.enabled = false
@@ -437,8 +487,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             lProcessOutlet.enabled = false
             lProcessOutlet.alpha = 0.2
             logTextView.text = logTextView.text + "✅Zakończono proces Load\n"
-//            let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
-//            logTextView.scrollRangeToVisible(range)
+
             busyAlertController.dismiss()
         }
         else
@@ -449,8 +498,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             lProcessOutlet.alpha = 0.2
             logTextView.text = logTextView.text + "✅Zakończono proces Load\n"
             logTextView.text = logTextView.text + "✅Zakończono proces ETL\n"
-//            let range = NSMakeRange(logTextView.text.characters.count - 1, 0)
-//            logTextView.scrollRangeToVisible(range)
+
             busyAlertController.dismiss()
         }
     }
@@ -472,9 +520,6 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
             {
                 print(error.localizedDescription)
             }
-
-            
-            
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 self.performSegueWithIdentifier("showReviews", sender: nil)
@@ -539,6 +584,45 @@ class MainViewController: UIViewController, UITextFieldDelegate, BusyAlertDelega
         view.endEditing(true)
     }
     
+    func numberOfPreviewItemsInPreviewController(controller: QLPreviewController) -> Int {
+        return 1
+    }
+
+    func previewController(controller: QLPreviewController, previewItemAtIndex index: Int) -> QLPreviewItem {
+        if selectedOption == 0
+        {
+            let dir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first
+            
+            let path = NSURL(fileURLWithPath: dir!).URLByAppendingPathComponent("products.csv")
+            
+            return path
+        }
+        else
+        {
+            let dir = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true).first
+            
+            let path = NSURL(fileURLWithPath: dir!).URLByAppendingPathComponent("products.txt")
+            
+            return path
+        }
+
+    }
+    
+    func removeFile(itemName:String, fileExtension: String) {
+        let fileManager = NSFileManager.defaultManager()
+        let nsDocumentDirectory = NSSearchPathDirectory.DocumentDirectory
+        let nsUserDomainMask = NSSearchPathDomainMask.UserDomainMask
+        let paths = NSSearchPathForDirectoriesInDomains(nsDocumentDirectory, nsUserDomainMask, true)
+        guard let dirPath = paths.first else {
+            return
+        }
+        let filePath = "\(dirPath)/\(itemName).\(fileExtension)"
+        do {
+            try fileManager.removeItemAtPath(filePath)
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }
+    }
 
 }
 

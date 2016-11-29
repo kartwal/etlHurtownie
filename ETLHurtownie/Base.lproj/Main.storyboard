@@ -46,6 +46,7 @@
                                 <rect key="frame" x="250" y="148" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="7Z7-Ka-ie7"/>
+                                    <constraint firstAttribute="height" constant="30" id="bks-ud-ZWE"/>
                                 </constraints>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="T">
@@ -59,6 +60,7 @@
                                 <rect key="frame" x="381" y="148" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="H5t-CP-4fx"/>
+                                    <constraint firstAttribute="height" constant="30" id="rZc-NK-Igu"/>
                                 </constraints>
                                 <state key="normal" title="L">
                                     <color key="titleColor" red="0.84313725490000002" green="0.0" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
@@ -74,12 +76,13 @@
                                     <constraint firstAttribute="height" constant="30" id="1x1-0U-Sft"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeR-iV-d0h">
                                 <rect key="frame" x="120" y="203" width="361" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="361" id="4Vm-mn-Iv7"/>
+                                    <constraint firstAttribute="height" constant="30" id="pGS-nZ-zzQ"/>
                                 </constraints>
                                 <color key="tintColor" red="0.84313725490000002" green="0.0" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="ETL"/>
@@ -91,6 +94,7 @@
                                 <rect key="frame" x="120" y="257" width="361" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="361" id="Let-uv-ekF"/>
+                                    <constraint firstAttribute="height" constant="30" id="gKI-53-vRX"/>
                                 </constraints>
                                 <color key="tintColor" red="0.84313725490000002" green="0.0" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Zobacz wyniki">
@@ -103,6 +107,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ok-qY-4WB">
                                 <rect key="frame" x="120" y="148" width="100" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="73G-aX-seV"/>
                                     <constraint firstAttribute="width" constant="100" id="YRz-sG-icF"/>
                                 </constraints>
                                 <state key="normal" title="E">
@@ -143,7 +148,9 @@
                             <constraint firstItem="zsK-PW-SGh" firstAttribute="leading" secondItem="3ok-qY-4WB" secondAttribute="trailing" constant="30" id="zJq-Yo-25C"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dds-Wa-PxV"/>
+                    <navigationItem key="navigationItem" id="dds-Wa-PxV">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="Vxy-AB-tgv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="eProcessOutlet" destination="3ok-qY-4WB" id="mrJ-bu-rbq"/>
                         <outlet property="etlProcessOutlet" destination="DeR-iV-d0h" id="KDF-7e-LAh"/>
@@ -263,6 +270,9 @@
                             <constraint firstItem="ne0-zN-Cjk" firstAttribute="bottom" secondItem="fyg-Lq-tja" secondAttribute="top" id="nMA-FI-jCA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Xy4-xX-efR">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="dcy-ou-8Xm"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ne0-zN-Cjk" id="E6c-Cy-GeN"/>
                         <segue destination="uf9-Bq-DEN" kind="show" identifier="showDetails" id="xba-gB-E3d"/>
