@@ -24,4 +24,4 @@ Ponieważ technologia użyta do przechowywania danych jest obiektowa istnieją d
 Każdy produkt posiada listę z obiektami typu Review - co odpowiada relacji 1 - &#8734; w relacyjnych bazach danych 
 
 ## Instrukcja użytkownika
-<!--[Link do instrukcji](https://docs.google.com/presentation/d/1HMFL0xjRb8wYqnbS5GlmsSTnOxsO483PdHdGJ8sx2bM/edit#slide=id.p)-->
+[Link do instrukcji](http://kartwal.ayz.pl/instrukcjaETL.pdf)

@@ -10,20 +10,20 @@ provides-member:
 - ["P12ETLHurtownie17BusyAlertDelegate", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "dispatch_async"
-- !private "NSLayoutAttribute"
-- "UIViewController"
-- "UIAlertController"
-- !private "UIActivityIndicatorViewStyle"
 - "String"
-- "BusyAlert"
-- !private "NSLayoutConstraint"
 - "UIActivityIndicatorView"
+- !private "UIActivityIndicatorViewStyle"
+- "UIAlertController"
 - !private "NSLayoutRelation"
 - !private "UIAlertControllerStyle"
-- "BusyAlertDelegate"
 - !private "BooleanLiteralType"
+- "BusyAlertDelegate"
 - !private "dispatch_get_main_queue"
+- !private "NSLayoutAttribute"
+- !private "dispatch_async"
+- "UIViewController"
+- !private "NSLayoutConstraint"
+- "BusyAlert"
 depends-member:
 - !private ["Ps9AnyObject", "NSLayoutAttribute"]
 - !private ["Ps9AnyObject", "NSLayoutConstraint"]

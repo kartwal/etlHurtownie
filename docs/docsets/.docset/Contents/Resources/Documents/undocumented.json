@@ -37,7 +37,7 @@
     },
     {
       "file": "/Users/kamilwalas/Documents/Studia/sum/hurtownie/etl/ETLHurtownie/ETLHurtownie/ProductDetailsViewController.swift",
-      "line": 165,
+      "line": 169,
       "symbol": "UITableView.reloadData(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

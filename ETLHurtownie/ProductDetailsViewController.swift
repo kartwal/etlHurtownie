@@ -111,17 +111,17 @@ class ProductDetailsViewController: UIViewController, UITableViewDelegate, UITab
         
         reviewString = ""
         
-        reviewString += "Autor opinii: " + product.reviews[indexPath.row].author + "\n"
+        reviewString += "Autor opinii: " + product.reviews[indexPath.row].author + "\n\n"
 
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        reviewString += "Data opinii: " + dateFormatter.stringFromDate(product.reviews[indexPath.row].reviewDate) + "\n"
+        reviewString += "Data opinii: " + dateFormatter.stringFromDate(product.reviews[indexPath.row].reviewDate) + "\n\n"
 
-        reviewString += "Rekomendacja: " + String(product.reviews[indexPath.row].recomended) + "\n"
+        reviewString += "Rekomendacja: " + String(product.reviews[indexPath.row].recomended) + "\n\n"
         
-        reviewString += "Ocena użytkownika: " + String(product.reviews[indexPath.row].starsCount)
+        reviewString += "Ocena użytkownika: " + String(product.reviews[indexPath.row].starsCount) + "\n\n"
         
-        reviewString += "Opinia: " + product.reviews[indexPath.row].body
+        reviewString += "Opinia:\n " + product.reviews[indexPath.row].body
         if product.reviews[indexPath.row].advantages.count > 0
         {
             reviewString += "\n\nZalety: \n"
@@ -130,7 +130,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDelegate, UITab
                 reviewString += item + "\n"
             }
         }
-        reviewString += "\n"
+        reviewString += "\n\n"
         
         if product.reviews[indexPath.row].advantages.count > 0
         {
@@ -140,8 +140,8 @@ class ProductDetailsViewController: UIViewController, UITableViewDelegate, UITab
                 reviewString += item + "\n"
             }
         }
-        reviewString += "\n" + "Oceny pozytywne komentarza: " + String(product.reviews[indexPath.row].thumbUpCount)
-        reviewString += "\n" + "Oceny negatywne komentarza: " + String(product.reviews[indexPath.row].thumbDownCount)
+        reviewString += "\n\n" + "Oceny pozytywne komentarza: " + String(product.reviews[indexPath.row].thumbUpCount)
+        reviewString += "\n\n" + "Oceny negatywne komentarza: " + String(product.reviews[indexPath.row].thumbDownCount)
 
         print(reviewString)
         let testView = UITextView()
@@ -149,7 +149,7 @@ class ProductDetailsViewController: UIViewController, UITableViewDelegate, UITab
         testView.font = UIFont.systemFontOfSize(15)
         let screenBounds = UIScreen.mainScreen().bounds
         let size = screenBounds.size
-        let sizeNew = testView.sizeThatFits(CGSizeMake(size.width - 10, CGFloat(FLT_MAX)))
+        let sizeNew = testView.sizeThatFits(CGSizeMake(size.width - 15, CGFloat(FLT_MAX)))
 
         return sizeNew.height
 
